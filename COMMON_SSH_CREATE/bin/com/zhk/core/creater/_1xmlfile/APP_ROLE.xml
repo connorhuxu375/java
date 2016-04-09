@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.zhk.core.app</packageName>
+    <className>AppRole</className>
+    <objectName>appRole</objectName>
+    <tableName>APP_ROLE</tableName>
+    <prefix>app</prefix>
+    
+    <colunm checkType="text" format="text" header="1" min="0" max="20" example="" value="value" text="text">
+        <column>ROLE_NAME</column>
+        <label>角色名称</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>roleName</field>
+        <getMethod>getRoleName</getMethod>
+        <setMethod>setRoleName</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="20" example="" value="value" text="text">
+        <column>ROLE_CODE</column>
+        <label>角色代码</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>roleCode</field>
+        <getMethod>getRoleCode</getMethod>
+        <setMethod>setRoleCode</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>STATUS</column>
+        <label>角色状态</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>status</field>
+        <getMethod>getStatus</getMethod>
+        <setMethod>setStatus</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

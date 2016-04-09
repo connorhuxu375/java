@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageNamcom.zhk.coreck.app</packageName>
+    <className>AppSchoolCfg</className>
+    <objectName>appSchoolCfg</objectName>
+    <tableName>APP_SCHOOL_CFG</tableName>
+    <prefix>app</prefix>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SEQID</column>
+        <label>SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>seqid</field>
+        <getMethod>getSeqid</getMethod>
+        <setMethod>setSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCH_SEQID</column>
+        <label>SCH_SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schSeqid</field>
+        <getMethod>getSchSeqid</getMethod>
+        <setMethod>setSchSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>MDL_SEQID</column>
+        <label>MDL_SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>mdlSeqid</field>
+        <getMethod>getMdlSeqid</getMethod>
+        <setMethod>setMdlSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SHOW_TYPE</column>
+        <label>SHOW_TYPE lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>showType</field>
+        <getMethod>getShowType</getMethod>
+        <setMethod>setShowType</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ORDER_ON</column>
+        <label>ORDER_ON lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>orderOn</field>
+        <getMethod>getOrderOn</getMethod>
+        <setMethod>setOrderOn</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

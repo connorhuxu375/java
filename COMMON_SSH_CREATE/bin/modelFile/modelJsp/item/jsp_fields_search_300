@@ -1,0 +1,13 @@
+<td style="width:70px">%%FieldLabelVal%%:从</td><!-- %%FieldLabelVal%%开始 date search --> 
+<td style="width:160px">
+ 
+<input 	readonly="readonly"   	   style="width:120px"  id="listdata_%%model%%_%%FieldNameVal%%" name='%%model%%.%%FieldNameVal%%' _label='%%FieldLabelVal%%' _value=''  _check='<%=CheckHelper.getCheck(%%Model%%.class,"%%FieldNameVal%%")%>'  _items='<%=CheckHelper.getItems(%%Model%%.class,"%%FieldNameVal%%")%>'>
+<img onclick="WdatePicker({el:'listdata_%%model%%_%%FieldNameVal%%',dateFmt:'yyyy-MM-dd HH:mm:ss'})" src="<%=basePath %>resource/img/setdate.png" width="16" height="16" align="absmiddle">
+	
+</td>
+<td style="width:70px">&nbsp;&nbsp;&nbsp;至:</td><!-- %%FieldLabelVal%%结束 date search --> 
+<td style="width:160px">
+
+<input readonly="readonly" 			style="width:120px"  id="listdata_%%model%%_%%FieldNameVal%%End" name='%%model%%.%%FieldNameVal%%End' _label='%%FieldLabelVal%%' _value=''  _check='<%=CheckHelper.getCheck(%%Model%%.class,"%%FieldNameVal%%")%>' _items='<%=CheckHelper.getItems(%%Model%%.class,"%%FieldNameVal%%")%>'>
+<img onclick="WdatePicker({el:'listdata_%%model%%_%%FieldNameVal%%End',dateFmt:'yyyy-MM-dd HH:mm:ss'})" src="<%=basePath %>resource/img/setdate.png" width="16" height="16" align="absmiddle">
+</td>

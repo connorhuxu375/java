@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.zhk.core.user</packageName>
+    <className>UserAccount</className>
+    <objectName>userAccount</objectName>
+    <tableName>USER_ACCOUNT</tableName>
+    <prefix>user</prefix>
+     
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>ACCOUNT</column>
+        <label>用户帐号</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>account</field>
+        <getMethod>getAccount</getMethod>
+        <setMethod>setAccount</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>PASSWORD</column>
+        <label>帐号密码</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>password</field>
+        <getMethod>getPassword</getMethod>
+        <setMethod>setPassword</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>STATUS</column>
+        <label>帐号状态</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>status</field>
+        <getMethod>getStatus</getMethod>
+        <setMethod>setStatus</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

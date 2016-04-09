@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.zhk.core.user</packageName>
+    <className>UserInfo</className>
+    <objectName>userInfo</objectName>
+    <tableName>USER_INFO</tableName>
+    <prefix>user</prefix>
+     
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>HEADER_IMG</column>
+        <label>图像</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>headerImg</field>
+        <getMethod>getHeaderImg</getMethod>
+        <setMethod>setHeaderImg</setMethod>
+        <generation search="false" sort="false" list="false" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>MY_SIGNATURE</column>
+        <label>签名</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>mySignature</field>
+        <getMethod>getMySignature</getMethod>
+        <setMethod>setMySignature</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>NAME</column>
+        <label>名称</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>name</field>
+        <getMethod>getName</getMethod>
+        <setMethod>setName</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>AGE</column>
+        <label>年龄</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>age</field>
+        <getMethod>getAge</getMethod>
+        <setMethod>setAge</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SEX</column>
+        <label>性别</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>sex</field>
+        <getMethod>getSex</getMethod>
+        <setMethod>setSex</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>PROVINCE</column>
+        <label>省份</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>province</field>
+        <getMethod>getProvince</getMethod>
+        <setMethod>setProvince</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="20" example="" value="value" text="text">
+        <column>CITY</column>
+        <label>城市</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>city</field>
+        <getMethod>getCity</getMethod>
+        <setMethod>setCity</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="500" example="" value="value" text="text">
+        <column>ADDRESS</column>
+        <label>地址</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>address</field>
+        <getMethod>getAddress</getMethod>
+        <setMethod>setAddress</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

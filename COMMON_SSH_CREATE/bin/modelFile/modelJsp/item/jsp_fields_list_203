@@ -1,0 +1,32 @@
+{	field : '%%FieldNameVal%%',
+	title : '%%FieldLabelVal%%',
+	width : 120,
+	align : 'left' ,
+	formatter : function(value,row, index) {
+		var result ='';
+		var tempValue =row.%%FieldNameVal%%;
+		if (tempValue)  {	
+			var valueArray = tempValue.split(",");
+			if(valueArray == null || valueArray.length==0){
+				result = ''
+				return result;
+			}
+			%%Jquery%%.each(valueArray, function(i) {
+				var temp = <%=CheckHelper.getItems(TstAccount.class,"%%FieldNameVal%%")%>
+				%%Jquery%%.each(temp.items, function(j) {
+					if(temp.items[j].value+'' == valueArray[i]+''){
+				 		result=result+temp.items[j].text+',' 
+				 	}
+				});
+			});
+			if(result.length>=1){
+				result = result.substring(0,result.length-1);
+			}else{
+				result=tempValue;
+			}
+		} else { 
+			result = '';
+		}
+		return result;
+	}	 
+} ,

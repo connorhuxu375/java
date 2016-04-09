@@ -1,0 +1,7 @@
+<tr height="30"> <!-- checkbox form -->
+	<td>%%FieldLabelVal%%</td>
+	<td>:</td>	
+	<td>
+		<span style='width: 160'  type="text" id='%%model%%_%%FieldNameVal%%'  name='%%model%%.%%FieldNameVal%%'     _label='%%FieldLabelVal%%' _value=''  _check='<%=CheckHelper.getCheck(%%Model%%.class,"%%FieldNameVal%%")%>' _items='<%=CheckHelper.getItems(%%Model%%.class,"%%FieldNameVal%%")%>' ><span>
+	</td>
+</tr> 

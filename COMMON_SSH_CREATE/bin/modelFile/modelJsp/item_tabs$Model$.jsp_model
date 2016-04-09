@@ -1,0 +1,21 @@
+<%@page 	language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@include 	file="/import/include/import.jsp" %>
+<%@page 	import="com.nvm.%%author%%.%%subpackage%%.action.*"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!-- 
+  @author  : %%authorInfo%%
+  @version : %%version%%
+  @date     : %%date%%
+-->
+<div id="item_tab%%model%%" class="easyui-tabs" data-options="fit:true,
+		onBeforeClose:function(title,index){
+			if(title == '显示数据'){
+				$('item_tab%%model%%').dialog('destroy');
+			}
+		}">   
+    <div title="显示数据" data-options="closable:true,href:'<%=basePath %>%%rootdir%%/%%subpackage%%/%%model%%/item_data%%Model%%.jsp'">   
+    </div>  
+</div> 

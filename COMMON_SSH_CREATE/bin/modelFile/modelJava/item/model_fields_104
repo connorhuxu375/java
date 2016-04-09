@@ -1,0 +1,29 @@
+	  /**
+		*DATETIME类型.请设置 must   
+		*%%FieldLableVal%% 查询开始字段 (及持久化用)
+		*/
+	@CheckCondition(
+		infos="{label:'%%FieldLableVal%%',export:1}",
+		check="{type:'text',max:20,min:0,must:1,format:'datetime',example:'2008-08-08'}"  )
+	@Column(name="%%FieldColumn%%")
+	private   %%FieldType%%   %%FieldNameVal%%;
+	public void %%setMethodName%%(  %%FieldType%%  %%FieldNameVal%%){
+		 this.%%FieldNameVal%%=%%FieldNameVal%%;
+	}
+	@JSON(format="yyyy-MM-dd HH:mm:ss")
+	public   %%FieldType%%   %%getMethodName%%(){
+		return %%FieldNameVal%%;
+	}
+    /**
+ 	 *对应 %%FieldLableVal%% 查询结束字段 
+ 	 *非持久化属性.用于结束查询条件
+	 */
+	@Transient
+	private   %%FieldType%%   %%FieldNameVal%%End;
+	public void %%setMethodName%%End(  %%FieldType%%  %%FieldNameVal%%End){
+		 this.%%FieldNameVal%%End=%%FieldNameVal%%End;
+	}
+	@JSON(format="yyyy-MM-dd HH:mm:ss")
+	public   %%FieldType%%   %%getMethodName%%End(){
+		return %%FieldNameVal%%End;
+	}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.zhk.core.sch</packageName>
+    <className>SchSchoolInfo</className>
+    <objectName>schSchoolInfo</objectName>
+    <tableName>SCH_SCHOOL_INFO</tableName>
+    <prefix>sch</prefix>
+     
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>SCHOOL_NAME</column>
+        <label>学校名称</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schoolName</field>
+        <getMethod>getSchoolName</getMethod>
+        <setMethod>setSchoolName</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>LONGITUDE</column>
+        <label>经度</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>longitude</field>
+        <getMethod>getLongitude</getMethod>
+        <setMethod>setLongitude</setMethod>
+        <generation search="false" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>LATITUDE</column>
+        <label>纬度</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>latitude</field>
+        <getMethod>getLatitude</getMethod>
+        <setMethod>setLatitude</setMethod>
+        <generation search="false" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+     <colunm checkType="select" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>PROVINCE</column>
+        <label>省份</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>province</field>
+        <getMethod>getProvince</getMethod>
+        <setMethod>setProvince</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>CITY</column>
+        <label>城市</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>city</field>
+        <getMethod>getCity</getMethod>
+        <setMethod>setCity</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="2000" example="" value="value" text="text">
+        <column>ADDRESS</column>
+        <label>地址</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>address</field>
+        <getMethod>getAddress</getMethod>
+        <setMethod>setAddress</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SECTION</column>
+        <label>学校学段</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>section</field>
+        <getMethod>getSection</getMethod>
+        <setMethod>setSection</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="20" example="" value="value" text="text">
+        <column>SCHOOL_MGR</column>
+        <label>校长</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schoolMgr</field>
+        <getMethod>getSchoolMgr</getMethod>
+        <setMethod>setSchoolMgr</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>SYS_CODE</column>
+        <label>系统编码</label>
+        <javaType>String</javaType>
+        <must>0</must>
+        <export>1</export>
+        <field>sysCode</field>
+        <getMethod>getSysCode</getMethod>
+        <setMethod>setSysCode</setMethod>
+        <generation search="false" sort="false" list="false" input="false" detail="false" pojo="true"/>
+    </colunm>
+</Table>

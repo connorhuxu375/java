@@ -1,0 +1,7 @@
+<tr height="30">  <!-- password form --> 
+	<td>%%FieldLabelVal%%</td>
+	<td>:</td>	
+	<td>
+		<input style='width: 160'  type="password" id='%%model%%_%%FieldNameVal%%'  name='%%model%%.%%FieldNameVal%%'     _label='%%FieldLabelVal%%' _value=''  _check='<%=CheckHelper.getCheck(%%Model%%.class,"%%FieldNameVal%%")%>' _items='<%=CheckHelper.getItems(%%Model%%.class,"%%FieldNameVal%%")%>' />
+	</td>
+</tr> 

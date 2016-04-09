@@ -1,0 +1,133 @@
+package com.nvm.%%author%%.%%subpackage%%.action;
+ 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.BeanUtils;
+import com.opensymphony.xwork2.Action;
+
+import com.zhk.core.base.actionbase.AjaxActionBase;
+import com.zhk.core.base.actionbase.JsonResult;
+import com.zhk.core.base.actionbase.ResultConstant;
+import com.zhk.core.base.daobase.Pagination;
+import com.zhk.core.common.util.ExcelHelper;
+import com.zhk.core.base.modelbase.anntation.CheckHelper;
+import com.zhk.core.base.modelbase.ModelBase;
+import com.zhk.core.common.util.DateUtil;
+import com.zhk.core.common.util.StrUtil;
+
+import com.zhk.core.%%subpackage%%.service.%%Model%%Service;
+/** 
+ * 
+ * 描述：%%Model%%ACTION
+ * @author	: %%authorInfo%%
+ * @version : %%version%%
+ * @date     : %%date%%
+ */
+public class Ajax%%Model%%Action extends AjaxActionBase{
+	public final static  Logger log = Logger.getLogger(Ajax%%Model%%Action.class);
+	private static final long serialVersionUID = 1L;
+	////////////////////////////服务对象////////////////////////////////
+    private %%Model%%Service service;
+    public Ajax%%Model%%Action(%%Model%%Service service) {
+        this.service = service;
+    }
+	////////////////////////////装载值////////////////////////////////
+	private %%Model%% %%model%%= new %%Model%%();
+	@Override
+    public %%Model%% getModel() {
+        return %%model%%;
+    }
+	public %%Model%% get%%Model%%() {
+        return %%model%%;
+    }
+    public void set%%Model%%(%%Model%% %%model%%) {
+        this.%%model%% = %%model%%;
+    }
+    
+    /**
+     * 分页获取列表(无需分页的把ROWS设置为够大值即可)
+     * @author : %%author%%
+     * @version: %%version%%
+ 	 * @date   : %%date%%  
+     * @return :
+     */
+    @SuppressWarnings(value="unchecked")
+    public String list() throws Exception {
+    	JsonResult jsonResult = service.getPagination(%%model%%);
+    	BeanUtils.copyProperties(jsonResult, this.getJsonResult());
+    	this.getJsonResult().setResult(200);
+	    return Action.SUCCESS;
+    }
+    /**
+     * 保存对像
+     * @author : %%author%%
+     * @version: %%version%%
+ 	 * @date   : %%date%%  
+     * @return :
+     */
+    @SuppressWarnings(value="unchecked")
+    public String save()throws Exception {
+    	CheckHelper.doCheckAjax( %%model%%,this.getJsonResult());
+    	this.service.save(%%model%%);
+		this.%%model%% = new %%Model%%();
+		return Action.SUCCESS;
+    }
+    /**
+     * 获取单个对象
+     * @author : %%author%%
+     * @version: %%version%%
+ 	 * @date   : %%date%%   
+     * @return :
+     */
+    @SuppressWarnings(value="unchecked")
+    public String find()throws Exception {
+		%%Model%% %%model%% = (%%Model%% )this.service.getOne(this.%%model%%.getSeqid(),%%Model%%.class);
+		this.getJsonResult().setModel(%%model%%);
+		return Action.SUCCESS;
+    } 
+    /**
+     * 删除单个对象
+     * @author :  %%author%%
+     * @version:  %%version%%
+ 	 * @date   :  %%date%%   
+     * @return :
+     */
+    public String delete()throws Exception {
+    	this.service.delete(%%model%%.getSeqid(),%%Model%%.class);
+        return  Action.SUCCESS;
+    }
+    /**
+     * 删除批量对象
+     * @author : %%author%%
+     * @version: %%version%%
+ 	 * @date   : %%date%%   
+     * @return :
+     */
+    @SuppressWarnings(value="unchecked")
+    public String deletes()throws Exception {
+    	this.service.deleteBatch(StrUtil.str2lst(this.getRemoveListIds()),%%Model%%.class); 
+        %%model%% = new %%Model%%();
+        return  Action.SUCCESS;
+    }
+    /**
+     * 下载时调用的方法. 
+     * @author : %%author%%
+     * @version: %%version%%
+ 	 * @date   : %%date%%   
+     * @return :
+     */
+    @SuppressWarnings(value="unchecked")
+    public String excel() throws Exception {
+    	JsonResult jsonResult = service.getPagination(%%model%%);
+    	List<ModelBase> datas = jsonResult.getRows();
+    	String fileName = ExcelHelper.createExcel(datas,%%Model%%.class);
+    	this.getJsonResult().setResult(ResultConstant.success_download);
+    	this.getJsonResult().setDownloadUrl(fileName);
+	    return Action.SUCCESS;
+    }
+    /********************************************************
+     * 基它方法
+     *******************************************************/
+}

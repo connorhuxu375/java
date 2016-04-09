@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.zhk.core.user</packageName>
+    <className>UserAccountRoleMap</className>
+    <objectName>userAccountRoleMap</objectName>
+    <tableName>USER_ACCOUNT_ROLE_MAP</tableName>
+    <prefix>user</prefix>
+    
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ACC_SEQID</column>
+        <label>帐号</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>accSeqid</field>
+        <getMethod>getAccSeqid</getMethod>
+        <setMethod>setAccSeqid</setMethod>
+        <generation search="false" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>UPDATETIME</column>
+        <label>操作时间</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>updatetime</field>
+        <getMethod>getUpdatetime</getMethod>
+        <setMethod>setUpdatetime</setMethod>
+        <generation search="false" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ROLE_SEQID</column>
+        <label>角色</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>roleSeqid</field>
+        <getMethod>getRoleSeqid</getMethod>
+        <setMethod>setRoleSeqid</setMethod>
+        <generation search="false" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>USER_SEQID</column>
+        <label>身份</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>userSeqid</field>
+        <getMethod>getUserSeqid</getMethod>
+        <setMethod>setUserSeqid</setMethod>
+        <generation search="false" sort="true" list="false" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

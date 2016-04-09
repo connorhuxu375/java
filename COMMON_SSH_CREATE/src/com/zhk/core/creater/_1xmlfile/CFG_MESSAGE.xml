@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.cfg</packageName>
+    <className>CfgMessage</className>
+    <objectName>cfgMessage</objectName>
+    <tableName>CFG_MESSAGE</tableName>
+    <prefix>cfg</prefix>
+    <colunm checkType="text" format="text" header="1" min="0" max="10" example="" value="value" text="text">
+        <column>SEQID</column>
+        <label>SEQID lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>seqid</field>
+        <getMethod>getSeqid</getMethod>
+        <setMethod>setSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="10" example="" value="value" text="text">
+        <column>SCH_SEQID</column>
+        <label>SCH_SEQID lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schSeqid</field>
+        <getMethod>getSchSeqid</getMethod>
+        <setMethod>setSchSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>MSG_TYPE</column>
+        <label>MSG_TYPE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>msgType</field>
+        <getMethod>getMsgType</getMethod>
+        <setMethod>setMsgType</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>MSG_CODE</column>
+        <label>MSG_CODE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>msgCode</field>
+        <getMethod>getMsgCode</getMethod>
+        <setMethod>setMsgCode</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="2000" example="" value="value" text="text">
+        <column>MSG_CONTENT</column>
+        <label>MSG_CONTENT lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>msgContent</field>
+        <getMethod>getMsgContent</getMethod>
+        <setMethod>setMsgContent</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

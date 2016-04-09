@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.dev</packageName>
+    <className>DevIpcamInfo</className>
+    <objectName>devIpcamInfo</objectName>
+    <tableName>DEV_IPCAM_INFO</tableName>
+    <prefix>dev</prefix>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SEQID</column>
+        <label>SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>seqid</field>
+        <getMethod>getSeqid</getMethod>
+        <setMethod>setSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="12" example="" value="value" text="text">
+        <column>IPCAMID</column>
+        <label>IPCAMID lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>ipcamid</field>
+        <getMethod>getIpcamid</getMethod>
+        <setMethod>setIpcamid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="80" example="" value="value" text="text">
+        <column>ADDRESS</column>
+        <label>ADDRESS lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>address</field>
+        <getMethod>getAddress</getMethod>
+        <setMethod>setAddress</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>LEAVE_DATE</column>
+        <label>LEAVE_DATE lable</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>leaveDate</field>
+        <getMethod>getLeaveDate</getMethod>
+        <setMethod>setLeaveDate</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="65" example="" value="value" text="text">
+        <column>CERTIFICATE</column>
+        <label>CERTIFICATE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>certificate</field>
+        <getMethod>getCertificate</getMethod>
+        <setMethod>setCertificate</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="80" example="" value="value" text="text">
+        <column>NOTE</column>
+        <label>NOTE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>note</field>
+        <getMethod>getNote</getMethod>
+        <setMethod>setNote</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ISUSE</column>
+        <label>ISUSE lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>isuse</field>
+        <getMethod>getIsuse</getMethod>
+        <setMethod>setIsuse</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>PROTOCOL</column>
+        <label>PROTOCOL lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>protocol</field>
+        <getMethod>getProtocol</getMethod>
+        <setMethod>setProtocol</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>FIX_LAST_DATE</column>
+        <label>FIX_LAST_DATE lable</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>fixLastDate</field>
+        <getMethod>getFixLastDate</getMethod>
+        <setMethod>setFixLastDate</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>LIMIT_LAST_DATE</column>
+        <label>LIMIT_LAST_DATE lable</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>limitLastDate</field>
+        <getMethod>getLimitLastDate</getMethod>
+        <setMethod>setLimitLastDate</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="12" example="" value="value" text="text">
+        <column>REGPWD</column>
+        <label>REGPWD lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>regpwd</field>
+        <getMethod>getRegpwd</getMethod>
+        <setMethod>setRegpwd</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>REGDATE</column>
+        <label>REGDATE lable</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>regdate</field>
+        <getMethod>getRegdate</getMethod>
+        <setMethod>setRegdate</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="12" example="" value="value" text="text">
+        <column>CHANNELNO</column>
+        <label>CHANNELNO lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>channelno</field>
+        <getMethod>getChannelno</getMethod>
+        <setMethod>setChannelno</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ISYINGJIA</column>
+        <label>ISYINGJIA lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>isyingjia</field>
+        <getMethod>getIsyingjia</getMethod>
+        <setMethod>setIsyingjia</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>IPCAM_TYPE</column>
+        <label>IPCAM_TYPE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>ipcamType</field>
+        <getMethod>getIpcamType</getMethod>
+        <setMethod>setIpcamType</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>CONN_TYPE</column>
+        <label>CONN_TYPE lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>connType</field>
+        <getMethod>getConnType</getMethod>
+        <setMethod>setConnType</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>IPCAMMAC</column>
+        <label>IPCAMMAC lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>ipcammac</field>
+        <getMethod>getIpcammac</getMethod>
+        <setMethod>setIpcammac</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>TUTK_UID</column>
+        <label>TUTK_UID lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>tutkUid</field>
+        <getMethod>getTutkUid</getMethod>
+        <setMethod>setTutkUid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

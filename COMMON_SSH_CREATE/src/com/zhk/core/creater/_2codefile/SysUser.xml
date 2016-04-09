@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.zhk.core.sys</packageName>
+    <className>SysUser</className>
+    <objectName>sysUser</objectName>
+    <tableName>SYS_USER</tableName>
+    <prefix>sys</prefix>
+     
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>ACCOUNT</column>
+        <label>用户帐号</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>account</field>
+        <getMethod>getAccount</getMethod>
+        <setMethod>setAccount</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>PASSWORD</column>
+        <label>帐号密码</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>password</field>
+        <getMethod>getPassword</getMethod>
+        <setMethod>setPassword</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ROLETYPE</column>
+        <label>角色类型</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>roletype</field>
+        <getMethod>getRoletype</getMethod>
+        <setMethod>setRoletype</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>USE_STATUS</column>
+        <label>用户状态</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>useStatus</field>
+        <getMethod>getUseStatus</getMethod>
+        <setMethod>setUseStatus</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>PROVINCE_NAME</column>
+        <label>省份</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>provinceName</field>
+        <getMethod>getProvinceName</getMethod>
+        <setMethod>setProvinceName</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>CITY_NAME</column>
+        <label>城市</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>cityName</field>
+        <getMethod>getCityName</getMethod>
+        <setMethod>setCityName</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>USERNUMBER</column>
+        <label>手机号</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>usernumber</field>
+        <getMethod>getUsernumber</getMethod>
+        <setMethod>setUsernumber</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>EMAIL</column>
+        <label>邮件</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>email</field>
+        <getMethod>getEmail</getMethod>
+        <setMethod>setEmail</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="1000" example="" value="value" text="text">
+        <column>NOTE</column>
+        <label>备注</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>note</field>
+        <getMethod>getNote</getMethod>
+        <setMethod>setNote</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

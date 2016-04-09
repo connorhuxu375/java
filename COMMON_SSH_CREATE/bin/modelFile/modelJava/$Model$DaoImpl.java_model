@@ -1,0 +1,57 @@
+package com.nvm.%%author%%.%%subpackage%%.dao;
+ 
+ import java.sql.Timestamp;
+import org.apache.log4j.Logger;
+import java.util.ArrayList;
+import java.util.List;
+import java.text.SimpleDateFormat;
+import org.springframework.util.StringUtils;
+
+import com.zhk.core.base.actionbase.JsonResult;
+import com.zhk.core.base.modelbase.ModelBase;
+import com.zhk.core.base.daobase.DaoBaseImpl;
+import com.zhk.core.common.exception.SystemCauseRuntimeException;
+import com.zhk.core.common.exception.PlatformCauseRuntimeException;
+
+import com.nvm.%%author%%.%%subpackage%%.action.%%Model%%;
+ 
+ 
+/**
+ * 
+ * 描述：%%Model%%DAO 实现类
+ * @author	: %%authorInfo%%
+ * @version : %%version%%
+ * @date     : %%date%%
+ */
+public class %%Model%%DaoImpl  extends DaoBaseImpl  implements %%Model%%Dao {
+	public final  Logger log = Logger.getLogger(%%Model%%DaoImpl.class);
+ 	/****************************************
+	 * 此方法在 DaoBaseImpl 实现为抛出异常.所以必须重写
+	 ****************************************/
+    @SuppressWarnings(value="unchecked")
+    public JsonResult findPagination(ModelBase modelBase) throws Exception{
+    	%%Model%% %%model%% = (%%Model%%)modelBase;
+    	StringBuffer condHql = new StringBuffer();
+    	List condParam = new ArrayList();
+    	/*************生成的查询条件***************************/
+    	%%dao_fields_seach%%
+    	/*************生成的查询条件***************************/
+    	return this.queryPage(
+    			" select p ",
+    			" from %%Model%% p where 1=1 "+condHql.toString() , 
+    			" order by p.seqid asc",
+    			condParam.toArray()	
+    	);
+    }
+    
+    
+    /**************************************** 
+	 *DaoBaseImpl  默认实现,可直接调用
+	 *submit(ModelBase)
+	 *remove(int)
+	****************************************/ 
+	 
+    /****************************************
+	 * 其它方法
+	****************************************/
+}

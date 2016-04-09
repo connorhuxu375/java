@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.cfg</packageName>
+    <className>CfgSchoolBase</className>
+    <objectName>cfgSchoolBase</objectName>
+    <tableName>CFG_SCHOOL_BASE</tableName>
+    <prefix>cfg</prefix>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCH_SEQID</column>
+        <label>学校</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schSeqid</field>
+        <getMethod>getSchSeqid</getMethod>
+        <setMethod>setSchSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ORDER_TYPE</column>
+        <label>学校业务类型</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>orderType</field>
+        <getMethod>getOrderType</getMethod>
+        <setMethod>setOrderType</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>HOME_PAGE</column>
+        <label>学校主页地址</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>homePage</field>
+        <getMethod>getHomePage</getMethod>
+        <setMethod>setHomePage</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="20" example="" value="value" text="text">
+        <column>SCHOOL_SUFFIX</column>
+        <label>学校后缀</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schoolSuffix</field>
+        <getMethod>getSchoolSuffix</getMethod>
+        <setMethod>setSchoolSuffix</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="20" example="" value="value" text="text">
+        <column>SCHOOL_PREFIX</column>
+        <label>学校前缀</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schoolPrefix</field>
+        <getMethod>getSchoolPrefix</getMethod>
+        <setMethod>setSchoolPrefix</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ABLE_SMS</column>
+        <label>短信开关</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>ableSms</field>
+        <getMethod>getAbleSms</getMethod>
+        <setMethod>setAbleSms</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

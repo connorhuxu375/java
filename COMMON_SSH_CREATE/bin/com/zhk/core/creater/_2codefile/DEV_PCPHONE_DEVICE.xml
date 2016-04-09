@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.dev</packageName>
+    <className>DevPcphoneDevice</className>
+    <objectName>devPcphoneDevice</objectName>
+    <tableName>DEV_PCPHONE_DEVICE</tableName>
+    <prefix>dev</prefix>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCH_SEQID</column>
+        <label>学校</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schSeqid</field>
+        <getMethod>getSchSeqid</getMethod>
+        <setMethod>setSchSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>DEVICE_ID</column>
+        <label>设备ID</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>deviceId</field>
+        <getMethod>getDeviceId</getMethod>
+        <setMethod>setDeviceId</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>STATUS</column>
+        <label>状态</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>status</field>
+        <getMethod>getStatus</getMethod>
+        <setMethod>setStatus</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ONLINE</column>
+        <label>是否在线</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>online</field>
+        <getMethod>getOnline</getMethod>
+        <setMethod>setOnline</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>DEVICE_PHONENUMBER</column>
+        <label>设备电话号码</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>devicePhonenumber</field>
+        <getMethod>getDevicePhonenumber</getMethod>
+        <setMethod>setDevicePhonenumber</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>DEVICE_NAME</column>
+        <label>设备名称</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>deviceName</field>
+        <getMethod>getDeviceName</getMethod>
+        <setMethod>setDeviceName</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>VERSION_INFO</column>
+        <label>版本号</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>versionInfo</field>
+        <getMethod>getVersionInfo</getMethod>
+        <setMethod>setVersionInfo</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>UPDATE_TIME</column>
+        <label>更新时间</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>updateTime</field>
+        <getMethod>getUpdateTime</getMethod>
+        <setMethod>setUpdateTime</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>PASSWORD</column>
+        <label>密码</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>password</field>
+        <getMethod>getPassword</getMethod>
+        <setMethod>setPassword</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>NOTIFY_FLAG</column>
+        <label>是否通知</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>notifyFlag</field>
+        <getMethod>getNotifyFlag</getMethod>
+        <setMethod>setNotifyFlag</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

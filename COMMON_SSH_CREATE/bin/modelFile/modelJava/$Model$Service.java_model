@@ -1,0 +1,16 @@
+package com.nvm.%%author%%.%%subpackage%%.service;
+import com.zhk.core.base.modelbase.ModelBase;
+import com.zhk.core.base.servicebase.ServiceBase;
+ 
+/**
+ * 
+ * 描述：%%Model%%SERVER 接口
+ * @author	: %%authorInfo%%
+ * @version : %%version%%
+ * @date     : %%date%%
+ */
+public interface %%Model%%Service extends ServiceBase {
+    /*****************************************
+	 * 其它SERVICE需提供的方法在此申明
+	 ****************************************/
+}

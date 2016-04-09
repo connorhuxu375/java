@@ -1,0 +1,133 @@
+package ${T.packageName};
+ 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.BeanUtils;
+import com.opensymphony.xwork2.Action;
+
+import com.zhk.core.base.actionbase.AjaxActionBase;
+import com.zhk.core.base.actionbase.JsonResult;
+import com.zhk.core.base.actionbase.ResultConstant;
+import com.zhk.core.base.daobase.Pagination;
+import com.zhk.core.common.util.ExcelHelper;
+import com.zhk.core.base.modelbase.anntation.CheckHelper;
+import com.zhk.core.base.modelbase.ModelBase;
+import com.zhk.core.common.util.DateUtil;
+import com.zhk.core.common.util.StrUtil;
+
+/** 
+ * 
+ * 描述：${T.className}ACTION
+ * @author	:${A.authorInfo}
+ * @version	:${A.version}
+ * @date	:${A.date}
+ * 说明:		:${A.note}
+ */
+public class Ajax${T.className}Action extends AjaxActionBase{
+	public final static  Logger log = Logger.getLogger(Ajax${T.className}Action.class);
+	private static final long serialVersionUID = 1L;
+	////////////////////////////服务对象////////////////////////////////
+    private ${T.className}Service service;
+    public Ajax${T.className}Action(${T.className}Service service) {
+        this.service = service;
+    }
+	////////////////////////////装载值////////////////////////////////
+	private ${T.className} ${T.objectName}= new ${T.className}();
+	@Override
+    public ${T.className} getModel() {
+        return ${T.objectName};
+    }
+	public ${T.className} get${T.className}() {
+        return ${T.objectName};
+    }
+    public void set${T.className}(${T.className} ${T.objectName}) {
+        this.${T.objectName} = ${T.objectName};
+    }
+    
+    /**
+     * 分页获取列表(无需分页的把ROWS设置为够大值即可)
+     * @author : ${A.authorName}
+     * @version: ${A.version}
+ 	 * @date   : ${A.date} 
+     * @return :
+     */
+    @SuppressWarnings(value="unchecked")
+    public String list() throws Exception {
+    	JsonResult jsonResult = service.getPagination(${T.objectName});
+    	BeanUtils.copyProperties(jsonResult, this.getJsonResult());
+    	this.getJsonResult().setResult(200);
+	    return Action.SUCCESS;
+    }
+    /**
+     * 保存对像
+     * @author : ${A.authorName}
+     * @version: ${A.version}
+ 	 * @date   : ${A.date} 
+     * @return :
+     */
+    @SuppressWarnings(value="unchecked")
+    public String save()throws Exception {
+    	CheckHelper.doCheckAjax( ${T.objectName},this.getJsonResult());
+    	this.service.save(${T.objectName});
+		this.${T.objectName} = new ${T.className}();
+		return Action.SUCCESS;
+    }
+    /**
+     * 获取单个对象
+     * @author : ${A.authorName}
+     * @version: ${A.version}
+ 	 * @date   : ${A.date}  
+     * @return :
+     */
+    @SuppressWarnings(value="unchecked")
+    public String find()throws Exception {
+		${T.className} ${T.objectName} = (${T.className} )this.service.getOne(this.${T.objectName}.getSeqid(),${T.className}.class);
+		this.getJsonResult().setModel(${T.objectName});
+		return Action.SUCCESS;
+    } 
+    /**
+     * 删除单个对象
+     * @author :  ${A.authorName}
+     * @version:  ${A.version}
+ 	 * @date   :  ${A.date}  
+     * @return :
+     */
+    public String delete()throws Exception {
+    	this.service.delete(${T.objectName}.getSeqid(),${T.className}.class);
+        return  Action.SUCCESS;
+    }
+    /**
+     * 删除批量对象
+     * @author : ${A.authorName}
+     * @version: ${A.version}
+ 	 * @date   : ${A.date}  
+     * @return :
+     */
+    @SuppressWarnings(value="unchecked")
+    public String deletes()throws Exception {
+    	this.service.deleteBatch(StrUtil.str2lst(this.getRemoveListIds()),${T.className}.class); 
+        ${T.objectName} = new ${T.className}();
+        return  Action.SUCCESS;
+    }
+    /**
+     * 下载时调用的方法. 
+     * @author : ${A.authorName}
+     * @version: ${A.version}
+ 	 * @date   : ${A.date}  
+     * @return :
+     */
+    @SuppressWarnings(value="unchecked")
+    public String excel() throws Exception {
+    	JsonResult jsonResult = service.getPagination(${T.objectName});
+    	List<ModelBase> datas = jsonResult.getRows();
+    	String fileName = ExcelHelper.createExcel(datas,${T.className}.class);
+    	this.getJsonResult().setResult(ResultConstant.success_download);
+    	this.getJsonResult().setDownloadUrl(fileName);
+	    return Action.SUCCESS;
+    }
+    /********************************************************
+     * 基它方法
+     *******************************************************/
+}

@@ -1,0 +1,6 @@
+<td style="width:70">%%FieldLabelVal%%:</td><!-- %%FieldLabelVal%%  select  search --> 
+<td style="width:160"><select class="easyui-validatebox"   style='width:120px' name="\%%model\%%.%%FieldNameVal%%"
+	 _check='<%=CheckHelper.getCheck(%%Model%%.class,"%%FieldNameVal%%")%>'
+	_items='<%=CheckHelper.getItems(%%Model%%.class,"%%FieldNameVal%%")%>' >
+ 	</select>
+ </td>

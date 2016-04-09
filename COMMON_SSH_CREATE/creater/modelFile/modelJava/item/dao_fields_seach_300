@@ -1,0 +1,11 @@
+	   /**
+		*日期查询,提供区间查询
+		*/
+		if(%%model%%.%%getMethodName%%()    !=null ){
+			condHql.append(" and p.%%FieldNameVal%%  >=  ? ");
+			condParam.add(new Timestamp(%%model%%.%%getMethodName%%().getTime()) );
+		}
+		if(%%model%%.%%getMethodName%%End() !=null ){
+			condHql.append(" and p.%%FieldNameVal%%  <= ? ");
+			condParam.add(new Timestamp(%%model%%.%%getMethodName%%End().getTime()) );
+		}

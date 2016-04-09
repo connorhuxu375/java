@@ -1,0 +1,14 @@
+	  /**
+		*TEXTEARE¿‡–Õ.«Î…Ë÷√ must  min   example
+		*/
+	@CheckCondition(
+		infos="{label:'%%FieldLableVal%%',export:1}",
+		check="{type:'textarea',max:%%FieldMaxLen%%,min:2,must:1,format:'text',example:'%%FieldNameVal%%'}"  )
+	@Column(name="%%FieldColumn%%")
+	private   %%FieldType%%   %%FieldNameVal%%;
+	public void %%setMethodName%%(  %%FieldType%%  %%FieldNameVal%%){
+		 this.%%FieldNameVal%%=%%FieldNameVal%%;
+	}
+	public   %%FieldType%%   %%getMethodName%%(){
+		return %%FieldNameVal%%;
+	}

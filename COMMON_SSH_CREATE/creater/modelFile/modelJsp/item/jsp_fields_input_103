@@ -1,0 +1,8 @@
+<tr height="30">  <!-- textarea form --> 
+	<td>%%FieldLabelVal%%</td>
+	<td>:</td>	
+	<td>
+		<textarea  cols='80' rows='6'    id='%%model%%_%%FieldNameVal%%'  name='%%model%%.%%FieldNameVal%%'     _label='%%FieldLabelVal%%' _value=''  _check='<%=CheckHelper.getCheck(%%Model%%.class,"%%FieldNameVal%%")%>' _items='<%=CheckHelper.getItems(%%Model%%.class,"%%FieldNameVal%%")%>' >
+		</textarea>
+	</td>
+</tr> 

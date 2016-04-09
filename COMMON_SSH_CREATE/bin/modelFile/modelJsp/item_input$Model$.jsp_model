@@ -1,0 +1,85 @@
+<%@page 	language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@include 	file="/import/include/import.jsp" %>
+<%@page 	import="com.nvm.%%author%%.%%subpackage%%.action.*"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%> 
+<!-- 
+  @author  : %%authorInfo%%
+  @version : %%version%%
+  @date     : %%date%%
+-->
+  <form     method="post">
+  	<input name="%%model%%.seqid"   type="hidden" value="${param.seqid}"   />
+	<table style="margin: 20px">
+		 %%jsp_fields_input%%
+		<tr height="30">
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+	var formitem_%%subpackage%%_%%Model%% 
+	$(function(){
+		//初使化表单formitem_%%subpackage%%_%%Model%% = globalInits(['field1','field1']);
+		 %%jsp_field_inits%% 
+		//获取更新的值 , 如果是添加.此步不需要.
+		if(${param.opera==2?2:1} == 2 ){
+			$.ajax({
+				type:'post',
+				url: "<%=basePath%>ajax/common_ajax%%Model%%_find",
+				data:'%%model%%.seqid=${param.seqid}',
+				dataType:'json',
+				success:function(info){	
+					if(info.result == 200){
+						var model = info.model;
+						%%jsp_fields_update%%
+					}else{
+				  		globalOnMessage(formitem_%%subpackage%%_%%Model%%,info);
+				  	}
+				},
+			 	error:function(errinfo){ 
+			 		globalOnError(errinfo);
+			 	}
+			}); 
+		}
+	});	
+	function onReset_input_%%subpackage%%_%%Model%%( ){
+		  globalOnReset(formitem_%%subpackage%%_%%Model%%);
+	}
+    function  onAjaxSubmit_input_%%subpackage%%_%%Model%%( ){
+    	var bool = globalOnSubmit(formitem_%%subpackage%%_%%Model%%);
+    	if(!bool){
+    		//alert("js check onsubmit result : "+ bool);
+    		return bool;
+    	}
+		 var data = globalGetAjaxData(formitem_%%subpackage%%_%%Model%%);
+		 data +='&%%model%%.seqid=${param.seqid}';
+		 $.ajax({
+			type:'post',
+			url: "<%=basePath%>ajax/common_ajax%%Model%%_save",
+			data:data,
+			dataType:'json',
+			success:function(info){
+				
+				if(info.result==200){
+					try{
+						search_listdata_%%subpackage%%_%%Model%%();
+					}catch(e){
+					}
+					onClose_input_%%subpackage%%_%%Model%%();
+				}
+			  	globalOnMessage(formitem_%%subpackage%%_%%Model%%,info);
+			},
+		 	error:function(errinfo){ 
+		 		globalOnError(errinfo);
+		 	}
+		});
+	 }
+	 function onClose_input_%%subpackage%%_%%Model%% (){
+	 	 $('#dialog_listdata_%%subpackage%%_%%Model%%').dialog('close');
+	 }
+	 </script>
+ </form>

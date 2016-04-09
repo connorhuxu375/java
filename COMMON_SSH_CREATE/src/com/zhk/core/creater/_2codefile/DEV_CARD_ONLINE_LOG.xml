@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.dev</packageName>
+    <className>DevCardOnlineLog</className>
+    <objectName>devCardOnlineLog</objectName>
+    <tableName>DEV_CARD_ONLINE_LOG</tableName>
+    <prefix>dev</prefix>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>ATT_ID</column>
+        <label>考勤机</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>attId</field>
+        <getMethod>getAttId</getMethod>
+        <setMethod>setAttId</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>HAVE_ONLINE</column>
+        <label>是否在线</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>haveOnline</field>
+        <getMethod>getHaveOnline</getMethod>
+        <setMethod>setHaveOnline</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SY_TIME_STATUS</column>
+        <label>同步在线时间</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>syTimeStatus</field>
+        <getMethod>getSyTimeStatus</getMethod>
+        <setMethod>setSyTimeStatus</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>NOTE</column>
+        <label>说明</label>
+        <javaType>String</javaType>
+        <must>0</must>
+        <export>1</export>
+        <field>note</field>
+        <getMethod>getNote</getMethod>
+        <setMethod>setNote</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+     <colunm checkType="select" format="int" header="1" min="0" max="14" example="" value="value" text="text">
+        <column>ATT_SEQID</column>
+        <label>考勤机id</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>attSeqid</field>
+        <getMethod>getAttSeqid</getMethod>
+        <setMethod>setAttSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

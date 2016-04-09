@@ -1,0 +1,23 @@
+{	field : '%%FieldNameVal%%',
+	title : '%%FieldLabelVal%%',
+	width : 120,
+	align : 'left' ,
+	formatter : function(value,row, index) {
+		var result ='';
+		var tempValue =row.%%FieldNameVal%%;
+		if (tempValue)  {	
+			var temp = <%=CheckHelper.getItems(%%Model%%.class,"%%FieldNameVal%%")%>
+			%%Jquery%%.each(temp.items, function(i) {
+				 if(temp.items[i].value+'' == tempValue+''){
+				 	result = temp.items[i].text+''
+				 }
+			});
+			if(result==''){
+				result = tempValue;
+			}
+		} else { 
+			result = '';
+		}
+		return result;
+	}	 
+} ,

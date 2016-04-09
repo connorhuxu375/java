@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageNamcom.zhk.coreck.user</packageName>
+    <className>UserAccount</className>
+    <objectName>userAccount</objectName>
+    <tableName>USER_ACCOUNT</tableName>
+    <prefix>user</prefix>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SEQID</column>
+        <label>SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>seqid</field>
+        <getMethod>getSeqid</getMethod>
+        <setMethod>setSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>ACCOUNT</column>
+        <label>ACCOUNT lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>account</field>
+        <getMethod>getAccount</getMethod>
+        <setMethod>setAccount</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>PASSWORD</column>
+        <label>PASSWORD lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>password</field>
+        <getMethod>getPassword</getMethod>
+        <setMethod>setPassword</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>STATUS</column>
+        <label>STATUS lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>status</field>
+        <getMethod>getStatus</getMethod>
+        <setMethod>setStatus</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>USER_INFO_SEQID</column>
+        <label>USER_INFO_SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>userInfoSeqid</field>
+        <getMethod>getUserInfoSeqid</getMethod>
+        <setMethod>setUserInfoSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

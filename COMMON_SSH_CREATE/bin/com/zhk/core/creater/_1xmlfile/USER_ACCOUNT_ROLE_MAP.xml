@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.user</packageName>
+    <className>UserCcountOleAp</className>
+    <objectName>userCcountOleAp</objectName>
+    <tableName>USER_ACCOUNT_ROLE_MAP</tableName>
+    <prefix>user</prefix>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SEQID</column>
+        <label>SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>seqid</field>
+        <getMethod>getSeqid</getMethod>
+        <setMethod>setSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ACC_SEQID</column>
+        <label>ACC_SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>accEqid</field>
+        <getMethod>getAccEqid</getMethod>
+        <setMethod>setAccEqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>UPDATETIME</column>
+        <label>UPDATETIME lable</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>updatetime</field>
+        <getMethod>getUpdatetime</getMethod>
+        <setMethod>setUpdatetime</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ROLE_SEQID</column>
+        <label>ROLE_SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>roleEqid</field>
+        <getMethod>getRoleEqid</getMethod>
+        <setMethod>setRoleEqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>USER_SEQID</column>
+        <label>USER_SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>userEqid</field>
+        <getMethod>getUserEqid</getMethod>
+        <setMethod>setUserEqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCH_SEQID</column>
+        <label>SCH_SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schEqid</field>
+        <getMethod>getSchEqid</getMethod>
+        <setMethod>setSchEqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

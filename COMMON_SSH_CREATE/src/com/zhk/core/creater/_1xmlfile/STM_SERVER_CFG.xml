@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.stm</packageName>
+    <className>StmServerCfg</className>
+    <objectName>stmServerCfg</objectName>
+    <tableName>STM_SERVER_CFG</tableName>
+    <prefix>stm</prefix>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SEQID</column>
+        <label>SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>seqid</field>
+        <getMethod>getSeqid</getMethod>
+        <setMethod>setSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="64" example="" value="value" text="text">
+        <column>IPADDRESS</column>
+        <label>IPADDRESS lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>ipaddress</field>
+        <getMethod>getIpaddress</getMethod>
+        <setMethod>setIpaddress</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCHJ_SEQID</column>
+        <label>SCHJ_SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schjSeqid</field>
+        <getMethod>getSchjSeqid</getMethod>
+        <setMethod>setSchjSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="256" example="" value="value" text="text">
+        <column>DESCRIBE</column>
+        <label>DESCRIBE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>describe</field>
+        <getMethod>getDescribe</getMethod>
+        <setMethod>setDescribe</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>SERVER_TYPE</column>
+        <label>SERVER_TYPE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>serverType</field>
+        <getMethod>getServerType</getMethod>
+        <setMethod>setServerType</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>PORT</column>
+        <label>PORT lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>port</field>
+        <getMethod>getPort</getMethod>
+        <setMethod>setPort</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>PRIORITY</column>
+        <label>PRIORITY lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>priority</field>
+        <getMethod>getPriority</getMethod>
+        <setMethod>setPriority</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>ACCOUNT</column>
+        <label>ACCOUNT lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>account</field>
+        <getMethod>getAccount</getMethod>
+        <setMethod>setAccount</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>ADD_TIME</column>
+        <label>ADD_TIME lable</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>addTime</field>
+        <getMethod>getAddTime</getMethod>
+        <setMethod>setAddTime</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

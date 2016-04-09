@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.dev</packageName>
+    <className>DevCardDoorMap</className>
+    <objectName>devCardDoorMap</objectName>
+    <tableName>DEV_CARD_DOOR_MAP</tableName>
+    <prefix>dev</prefix>
+    
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ATT_SEQID</column>
+        <label>设备</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>attSeqid</field>
+        <getMethod>getAttSeqid</getMethod>
+        <setMethod>setAttSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>DOORINDEX</column>
+        <label>门号</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>doorindex</field>
+        <getMethod>getDoorindex</getMethod>
+        <setMethod>setDoorindex</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="20" example="" value="value" text="text">
+        <column>DOORNAME</column>
+        <label>门名</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>doorname</field>
+        <getMethod>getDoorname</getMethod>
+        <setMethod>setDoorname</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

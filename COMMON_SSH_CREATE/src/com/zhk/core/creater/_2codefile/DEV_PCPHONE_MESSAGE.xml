@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.dev</packageName>
+    <className>DevPcphoneMessage</className>
+    <objectName>devPcphoneMessage</objectName>
+    <tableName>DEV_PCPHONE_MESSAGE</tableName>
+    <prefix>dev</prefix>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCH_SEQID</column>
+        <label>学校</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schSeqid</field>
+        <getMethod>getSchSeqid</getMethod>
+        <setMethod>setSchSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>CLS_SEQID</column>
+        <label>班级</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>clsSeqid</field>
+        <getMethod>getClsSeqid</getMethod>
+        <setMethod>setClsSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>STU_SEQID</column>
+        <label>学生</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>stuSeqid</field>
+        <getMethod>getStuSeqid</getMethod>
+        <setMethod>setStuSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="500" example="" value="value" text="text">
+        <column>MESSAGE</column>
+        <label>消息</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>message</field>
+        <getMethod>getMessage</getMethod>
+        <setMethod>setMessage</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>HAVA_READ</column>
+        <label>是否已读</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>havaRead</field>
+        <getMethod>getHavaRead</getMethod>
+        <setMethod>setHavaRead</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>READ_TIME</column>
+        <label>读取时间</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>readTime</field>
+        <getMethod>getReadTime</getMethod>
+        <setMethod>setReadTime</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>DEV_SEQID</column>
+        <label>设备名称</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>devSeqid</field>
+        <getMethod>getDevSeqid</getMethod>
+        <setMethod>setDevSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

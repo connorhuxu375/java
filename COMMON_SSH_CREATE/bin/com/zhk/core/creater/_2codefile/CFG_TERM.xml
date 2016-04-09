@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.cfg</packageName>
+    <className>CfgTerm</className>
+    <objectName>cfgTerm</objectName>
+    <tableName>CFG_TERM</tableName>
+    <prefix>cfg</prefix>
+   
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCH_SEQID</column>
+        <label>学校</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schSeqid</field>
+        <getMethod>getSchSeqid</getMethod>
+        <setMethod>setSchSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="10" example="" value="value" text="text">
+        <column>YYYY</column>
+        <label>学年</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>yyyy</field>
+        <getMethod>getYyyy</getMethod>
+        <setMethod>setYyyy</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>TERM1_START</column>
+        <label>上学期开始</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>term1Start</field>
+        <getMethod>getTerm1Start</getMethod>
+        <setMethod>setTerm1Start</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>TERM1_END</column>
+        <label>上学期结束</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>term1End</field>
+        <getMethod>getTerm1End</getMethod>
+        <setMethod>setTerm1End</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>TERM2_END</column>
+        <label>下学期结束</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>term2End</field>
+        <getMethod>getTerm2End</getMethod>
+        <setMethod>setTerm2End</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>TERM2_START</column>
+        <label>下学期开始</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>term2Start</field>
+        <getMethod>getTerm2Start</getMethod>
+        <setMethod>setTerm2Start</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

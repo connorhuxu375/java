@@ -1,0 +1,427 @@
+<%@page 	language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@include 	file="/import/include/import.jsp" %>
+<%@page 	import="com.zhk.core.base.modelbase.anntation.*"%>
+<%@page 	import="${T.packageName}.*"%>
+
+
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!-- 
+  @author	: ${A.authorName} : ${A.authorInfo}
+  @version	: ${A.version} 
+  @date	: ${A.date} 
+  说明	: ${A.note} 
+-->
+<div id="toolbar_listdata_${T.prefix}_${T.className}">
+	<form id="searchform_listdata_${T.prefix}_${T.className}" method="post">
+		<table style="text-align:left;" width="98%"  border="0" cellpadding="0" cellspacing="0" id="searchtable_listdata_${T.prefix}_${T.className}">
+#set(${T.index} = 0)	
+#foreach( ${C} in ${T.colunms} )
+#if (${C.G.SearchField})
+#if(${T.index}==0 || ${T.index}%4 == 0)
+<tr>
+#end
+
+#if ( ${C.checkType}=='select' || ${C.checkType}=='radio' || ${C.checkType}=='checkbox'  ) 
+<!--SELECT -->
+<td style="width:70">${C.label}:</td><!-- ${C.label}  select  search --> 
+<td style="width:160">
+	<select class="easyui-validatebox"   style='width:120px' name="${T.objectName}.${C.field}"
+	_check='<%=CheckHelper.getCheck(${T.className}.class,"${C.field}")%>'
+	_items='<%=CheckHelper.getItems(${T.className}.class,"${C.field}")%>' >
+ 	</select>
+</td>
+#elseif ( ${C.format}!='datetime'   ) 
+<!--STRING -->
+<td style="width:70px">${C.label}:</td><!-- ${C.label} like    search --> 
+<td style="width:160px">
+	<input class="easyui-validatebox"   style='width:120px' name="${T.objectName}.${C.field}" />
+</td>
+#if(${T.index}%4 == 3)
+</tr>
+#end
+#end
+#set(${T.index} = ${T.index}+1)	
+#end  
+#end
+##格式补充
+#if(${T.index}!=0)
+#set(${T.index} = ${T.index}%4)	
+#if(${T.index}  == 0)
+<!--
+<td></td><td></td></tr>
+-->
+#elseif(${T.index}  == 1) 	 
+</tr>
+#elseif(${T.index}  == 2) 	 
+<td></td><td></td><td></td><td></td>
+</tr>
+#elseif(${T.index} == 3) 	 
+<td></td><td></td>
+</tr>
+#end
+#end
+<!--////////华丽丽的分割线.华丽丽的分割线/////////-->			 
+#set(${T.index} = 0)			 
+#foreach( ${C} in ${T.colunms} )
+#if (${C.G.SearchField})
+#if ( ${C.format}=='datetime'   ) 
+#if(${T.index}==0 || ${T.index}%2 == 0)
+<tr>
+#end
+
+<!--DATETIME -->
+<td style="width:70px">${C.label}:从</td><!-- ${C.label}开始 date search --> 
+<td style="width:160px">
+	<input 	readonly="readonly"   	   style="width:120px"  id="listdata_cmpp2Mo_processTime" name='${T.objectName}.${C.field}' _label='${C.label}' _value=''  _check='<%=CheckHelper.getCheck(${T.className}.class,"${C.field}")%>'  _items='<%=CheckHelper.getItems(${T.className}.class,"${C.field}")%>'>
+	<img onclick="WdatePicker({el:'listdata_cmpp2Mo_processTime',dateFmt:'yyyy-MM-dd HH:mm:ss'})" src="<%=basePath %>resource/img/setdate.png" width="16" height="16" align="absmiddle">
+</td>
+<td style="width:70px">&nbsp;&nbsp;&nbsp;至:</td><!-- ${C.label}结束 date search --> 
+<td style="width:160px">
+	<input readonly="readonly" 			style="width:120px"  id="listdata_${T.objectName}_${C.field}End" name='${T.objectName}.${C.field}End' _label='处理时间' _value=''  _check='<%=CheckHelper.getCheck(${T.className}.class,"${C.field}")%>' _items='<%=CheckHelper.getItems(${T.className}.class,"${C.field}")%>'>
+	<img onclick="WdatePicker({el:'listdata_cmpp2Mo_processTimeEnd',dateFmt:'yyyy-MM-dd HH:mm:ss'})" src="<%=basePath %>resource/img/setdate.png" width="16" height="16" align="absmiddle">
+</td>
+#if(${T.index}%2 == 1)
+</tr>
+#end
+#set(${T.index} = ${T.index}+1)	
+#end 	
+#end  
+#end	
+##格式补充
+#if(${T.index}!=0)
+#set(${T.index} = ${T.index}%2)	
+#if(${T.index}  == 0)
+<!--
+</tr>
+-->
+#elseif(${T.index}  == 1) 	
+<td></td><td></td> 
+</tr>
+#end		 
+#end
+		</table>
+	</form>
+		<div>
+			<a href="javascript:void(0);" onclick="condition_listdata_${T.prefix}_${T.className}();"  class="btn btn-mini  btn-success" >
+			查询条件</a>
+			<a href="javascript:void(0)" id="${T.prefix}_${T.className}_roleright_r2" onclick="opear_listdata_${T.prefix}_${T.className}(1);" class="btn btn-mini btn-info" >
+			<i class="icon-plus icon-white"></i>添加</a> 
+			<a href="javascript:void(0)" id="${T.prefix}_${T.className}_roleright_r3" onclick="opear_listdata_${T.prefix}_${T.className}(2);" class="btn btn-mini btn-info" >
+			<i class="icon-pencil icon-white"></i>更新</a>  
+			<a href="javascript:void(0)" id="${T.prefix}_${T.className}_roleright_r4" onclick="opear_listdata_${T.prefix}_${T.className}(3);" class="btn btn-mini btn-info" >
+			<i class="icon-minus icon-white"></i>删除</a>  
+			<a href="javascript:void(0)" id="${T.prefix}_${T.className}_roleright_r1" onclick="opear_listdata_${T.prefix}_${T.className}(4);" class="btn btn-mini btn-info" >
+			<i class="icon-plus icon-white"></i>详情</a>
+			<a href="javascript:void(0);" onclick="search_listdata_${T.prefix}_${T.className}();"    class="btn btn-mini btn-primary">
+			<i class="icon-search  icon-white"></i>查询</a>
+			<a href="javascript:void(0);" onclick="clear_listdata_${T.prefix}_${T.className}();"    class="btn btn-mini btn-primary">
+			<i class="icon-refresh icon-white"></i>重置</a>
+			<a href="javascript:void(0);" onclick="export_listdata_${T.prefix}_${T.className}();"  class="btn btn-mini btn-inverse"  >
+			<i class="icon-upload icon-white"></i>导入</a>
+			<a href="javascript:void(0);" onclick="export_listdata_${T.prefix}_${T.className}();"  class="btn btn-mini btn-inverse"  >
+			<i class="icon-download icon-white"></i>导出</a>
+	</div>
+</div>
+
+<table id="dagagrid_listdata_${T.prefix}_${T.className}"></table>
+<script type="text/javascript">
+////////////////////////////////////////初使权限(非必须)////////////////////////////////////////
+/*
+var R =  //com.zhk.core.base.actionbase.roleright.RoleRightService.getRoleRight("pages/${T.prefix}/item_data_${T.ClassName}.jsp") ;
+if(R.r2==0){  $('#${T.prefix}_${T.className}_roleright_r2').css('display','none')}
+if(R.r3==0){  $('#${T.prefix}_${T.className}_roleright_r3').css('display','none')}
+if(R.r4==0){  $('#${T.prefix}_${T.className}_roleright_r4').css('display','none')}
+*/
+
+////////////////////////////////////////初使需从后台获取的列表项(非必须).////////////////////////////
+/*
+var selectItems1 =  //CheckHelper.getItems(${T.className}.class,"seqid") 
+if(selectItems1.url!='' ){
+	$.ajax({
+		type:'get',
+		url: config.WEB_ROOT+roletypeSelectItems.url,
+		dataType:'text',
+		async: false,
+		success:function(msg){
+			 var result = eval("("+msg+")");
+			 selectItems1.items = result.items; 
+		},
+		error:function(){ 
+		} 
+	});
+}
+//对应属性FORMAT
+function formatUrlItem(value){
+	var tempValue =value;
+	var result =tempValue;
+	if (tempValue)  {	
+		$.each(selectItems1.items, function(i) {
+			 if(selectItems1.items[i].value+'' ==  tempValue+''){
+			 	result = selectItems1.items[i].text+''
+			 	return result;
+			 }
+		});
+	} else { 
+		result = '';
+	}
+	return result;
+}
+*/
+
+
+//////////////////////////////////////////显示数据////////////////////////////////////////
+var _dagagrid_listdata_${T.prefix}_${T.className} = $('#dagagrid_listdata_${T.prefix}_${T.className}');
+_dagagrid_listdata_${T.prefix}_${T.className}.datagrid( {
+	nowrap : false,
+	striped : true,
+	border : false,
+	fit:true,
+	fitColumns : true,
+	collapsible : false,
+	remoteSort : false,
+	singleSelect : false,
+	checkOnSelect  : true,
+	pagination : true,
+	pagePosition:'bottom',
+	pageNumber:1,
+	pageSize:20,
+	pageList:[20,40,100,500,1000],
+	rownumbers : true,
+	loadMsg:'数据加载中,请稍后……',
+	url : '<%=basePath%>ajax/common_ajax${T.className}_list',
+	columns : [[
+	{	field : 'seqid',
+	title : '选择',
+	width : 120,
+	align : 'left' ,
+	checkbox:true
+}, 
+#foreach( ${C} in ${T.colunms} )
+#if (${C.G.ListField})
+{	field : '${C.field}',
+	title : '${C.label}',
+	width : 120,
+	align : 'left' ,
+	formatter : function(value,row, index) {
+	var result ='';
+	var tempValue =row.${C.field};
+#if ( ${C.checkType}=='select' || ${C.checkType}=='radio' || ${C.checkType}=='checkbox'  ) 
+		 if (tempValue)  {	
+			var temp = <%=CheckHelper.getItems(${T.className}.class,"${C.field}")%>
+			$.each(temp.items, function(i) {
+				 if(temp.items[i].value+'' == tempValue+''){
+				 	result = temp.items[i].text+''
+				 	//if(result.length>20){
+					//	result = result.substring(0,20)+'...';
+					//}
+					return result;
+				 }
+			});
+		} else { 
+			result = '';
+		}
+#else 
+		if (tempValue) {	
+			result =tempValue;
+		}  else { 
+			result=  '';
+		}
+#end 	
+	  	//if(result.length>20){
+	  	//	result = result.substring(0,20)+'...';
+	  	//}
+	  	return result;
+  	}
+} , 
+#end 
+#end 
+{	field : 'rownumber',
+	title : '操作',
+	width : 120,
+	formatter : function(value,row, index) {
+		var s = '<a class="easyui-linkbutton" href="javascript:void(0);" onclick="opear_listdata_${T.prefix}_${T.className}_operaType('+index+');"  >&nbsp;</a>';
+		return s ;
+	}
+}]],
+	toolbar:'#toolbar_listdata_${T.prefix}_${T.className}',
+	onLoadSuccess: function (data){
+	    if(data.result >=300){
+	    	globalOnMessage(null,data);
+	    }
+	},
+	onLoadError: function (data){
+	    	globalOnMessage(null,data);
+	}
+});
+//////////////////////////////////////////查询操作////////////////////////////////////////
+function search_listdata_${T.prefix}_${T.className}() {
+	_dagagrid_listdata_${T.prefix}_${T.className}.datagrid("load", helperSerializeObject($('#searchform_listdata_${T.prefix}_${T.className}')));
+}
+////////////////////////////////////////初使SELECT////////////////////////////////////////
+helperSelectInits('#searchtable_listdata_${T.prefix}_${T.className}');
+//////////////////////////////////////////清空查询条件////////////////////////////////////////
+function clear_listdata_${T.prefix}_${T.className}() {
+	$('#searchform_listdata_${T.prefix}_${T.className} input').val('');
+	helperSelectInits('#searchtable_listdata_${T.prefix}_${T.className}');
+	_dagagrid_listdata_${T.prefix}_${T.className}.datagrid('load',{});
+}
+
+//////////////////////////////////////////添加 更新 删除操作////////////////////////////////////////
+function opear_listdata_${T.prefix}_${T.className}(type){
+	var row = _dagagrid_listdata_${T.prefix}_${T.className}.datagrid('getSelected');
+	var seqid = 0;
+	if(type>1 ){
+		if(row){
+			seqid = row.seqid;
+		}else{
+			seqid = 0;
+			//$.messager.alert('提示','请先选择一行数据！')
+			new rockPopMessage().showPopMessage('请先选择一行数据',300); 
+			return;
+		}
+	}
+	if(type==1 || type == 2){
+		$('<div id="dialog_listdata_${T.prefix}_${T.className}"/>').dialog({    
+			title: (type==1 ? '添加' : '更新') + '操作',    
+			width: 800,    
+			height: 460,    
+			closed: false,    
+			cache: false,    
+			href: '<%=basePath%>pages/${T.prefix}/item_input_${T.className}.jsp?opera='+type+'&seqid='+seqid,
+			modal: true,
+			collapsible:true,
+			maximizable:true,
+			buttons: [{
+					text:'保存',
+					iconCls:'icon-ok',
+					handler:function(){
+						onAjaxSubmit_input_${T.prefix}_${T.className}();
+					}
+				},{
+					text:'重置',
+					handler:function(){
+						onReset_input_${T.prefix}_${T.className}();
+					}
+				},{
+					text:'关闭',
+					handler:function(){
+						onClose_input_${T.prefix}_${T.className}();
+					}
+				}],
+			onClose: function(){
+				$(this).dialog('destroy');
+			}   
+		}).dialog('center'); 
+	}else
+	if(type==3){ 
+		$.messager.confirm('删除提示', '您确定要执行删除操作?', function(r){
+			if (r){
+					var rows = _dagagrid_listdata_${T.prefix}_${T.className}.datagrid('getSelections'); 
+					var removeListIds = '';
+					$.each(rows,function(i){
+						removeListIds=removeListIds+'@'+rows[i].seqid;
+					});
+					////data:'${T.className}.seqid='+seqid,单个删除 
+					////data:'removeListIds='+removeListIds, 批量删除
+				  	$.ajax({
+						type:'post',
+						url: "<%=basePath%>ajax/common_ajax${T.className}_deletes",
+						data:'removeListIds='+removeListIds,
+						dataType:'json',
+						success:function(info){	
+							search_listdata_${T.prefix}_${T.className}();
+					  		globalOnMessage(null,info);
+						},
+					 	error:function(errinfo){ 
+					 		globalOnError(errinfo);
+					 	}
+					}); 
+			}
+		});
+	}else 
+	if(type ==4){
+		$('<div id="detail_listdata_${T.prefix}_${T.className}"/>').dialog({    
+			title: '详情操作',     
+			width: 800,    
+			height: 460,    
+			closed: false,    
+			cache: false, 
+			collapsible:true,
+			maximizable:true,   
+			href: '<%=basePath%>pages/${T.prefix}/item_detail_${T.className}.jsp?o&seqid='+seqid,
+			modal: true,
+			buttons: [ {
+					text:'关闭',
+					handler:function(){
+						onClose_input_${T.prefix}_${T.className}();
+					}
+				}],
+			onClose: function(){
+				$(this).dialog('destroy');
+			}   
+		}).dialog('center'); 
+	} 
+}
+//////////////////////////////////////////导出数据操作////////////////////////////////////////
+function export_listdata_${T.prefix}_${T.className}() {
+	$.ajax( {
+		type : 'post',
+		url : '<%=basePath%>ajax/common_ajax${T.className}_excel',
+		data: helperSerializeObject($('#searchform_listdata_${T.prefix}_${T.className}')),
+		dataType : 'json',
+		success : function(info) {
+			if(info.result==201){
+				window.location.href="<%=basePath%>download/excel/" + info.downloadUrl;
+			}else{
+				globalOnMessage(null,info);
+			}
+		}
+	});
+}
+////////////////////////////////////////操作调用方法(非必须)////////////////////////////////////////
+/*
+function opear_listdata_${T.prefix}_${T.className}_operaType(index){
+	_dagagrid_listdata_${T.prefix}_${T.className}.datagrid('unselectAll').datagrid('selectRow',index);
+	var row = _dagagrid_listdata_${T.prefix}_${T.className}.datagrid('getSelected');
+	var seqid = 0;
+	if(row){
+		seqid = row.seqid;
+	}else{
+		seqid = 0;
+		//$.messager.alert('提示','请先选择一行数据！')
+		new rockPopMessage().showPopMessage('请先选择一行数据',300); 
+		return;
+	}
+	$('<div id="opear_listdata_${T.prefix}_${T.className}_operaType"/>').dialog({    
+			title: '['+row.rolename+']operaType',    
+			width: 800,    
+			height: 460,    
+			closed: false,    
+			cache: false,    
+			href: '<%=basePath%>pages/${T.prefix}/${T.className}/item_data${T.className}.jsp?seqid='+seqid,
+			modal: true,
+			collapsible:true,
+			maximizable:true,
+			onClose: function(){
+				$(this).dialog('destroy');
+			}   
+		}).dialog('center'); 
+}
+*/
+////////////////////////////////////////切换是否显示查询条件////////////////////////////////////////
+function condition_listdata_${T.prefix}_${T.className}(){
+	var t = $('#searchtable_listdata_${T.prefix}_${T.className}');
+	var f = $('#searchform_listdata_${T.prefix}_${T.className}');
+	var d = $('#dagagrid_listdata_${T.prefix}_${T.className}');
+	t.toggle();
+	var w = d.parent().attr("width") -t.attr("width");
+	var h = d.parent().attr("height")-t.attr("height") ;
+	d.datagrid('resize', {
+		width:function(){return w},
+		height:function(){return h}
+	});
+}
+</script>

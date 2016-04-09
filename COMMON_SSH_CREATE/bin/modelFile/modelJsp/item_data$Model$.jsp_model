@@ -1,0 +1,267 @@
+<%@page 	language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@include 	file="/import/include/import.jsp" %>
+<%@page 	import="com.zhk.core.%%subpackage%%.action.*"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!-- 
+  @author  : %%authorInfo%%
+  @version : %%version%%
+  @date     : %%date%%
+-->
+<div id="toolbar_listdata_%%subpackage%%_%%Model%%">
+	<form id="searchform_listdata_%%subpackage%%_%%Model%%" method="post">
+		<table style="text-align:left;" width="98%"  border="0" cellpadding="0" cellspacing="0" id="searchtable_listdata_%%subpackage%%_%%Model%%">
+			%%jsp_fields_search%%
+		</table>
+	</form>
+	<div>
+			<a class="easyui-linkbutton" href="javascript:void(0);" onclick="condition_listdata_%%subpackage%%_%%Model%%();"  >查询条件</a>
+			<span style="width:20px" ></span>
+			<a href="javascript:void(0)" id="%%subpackage%%_%%Model%%_roleright_r2" onclick="opear_listdata_%%subpackage%%_%%Model%%(1);" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">添加</a> 
+			<a href="javascript:void(0)" id="%%subpackage%%_%%Model%%_roleright_r3" onclick="opear_listdata_%%subpackage%%_%%Model%%(2);" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true">修改</a>  
+			<a href="javascript:void(0)" id="%%subpackage%%_%%Model%%_roleright_r4" onclick="opear_listdata_%%subpackage%%_%%Model%%(3);" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">删除</a>  
+			<span style="width:20px" ></span>
+			<a class="easyui-linkbutton" href="javascript:void(0);" onclick="search_listdata_%%subpackage%%_%%Model%%();"  >查找</a>
+			<a class="easyui-linkbutton" href="javascript:void(0);" onclick="clear_listdata_%%subpackage%%_%%Model%%();"   >清空</a>
+			<span style="width:20px" ></span>
+			<a class="easyui-linkbutton" href="javascript:void(0);" onclick="export_listdata_%%subpackage%%_%%Model%%();" class="easyui-linkbutton" data-options="iconCls:'icon-save'">导出</a>
+		</div>
+</div>
+
+<table id="dagagrid_listdata_%%subpackage%%_%%Model%%"></table>
+<script type="text/javascript">
+////////////////////////////////////////初使权限(非必须)////////////////////////////////////////
+/*
+var R = <%=//com.zhk.core.base.actionbase.roleright.RoleRightService.getRoleRight("pages/sys/sysUser/item_dataSysUser.jsp")%>;
+if(R.r2==0){  $('#%%subpackage%%_%%Model%%_roleright_r2').css('display','none')}
+if(R.r3==0){  $('#%%subpackage%%_%%Model%%_roleright_r3').css('display','none')}
+if(R.r4==0){  $('#%%subpackage%%_%%Model%%_roleright_r4').css('display','none')}
+*/
+
+////////////////////////////////////////初使需从后台获取的列表项(非必须).////////////////////////////
+/*
+var selectItems1 = <%=//CheckHelper.getItems(%%Model%%.class,"seqid")%>
+if(selectItems1.url!='' ){
+	$.ajax({
+		type:'get',
+		url: config.WEB_ROOT+roletypeSelectItems.url,
+		dataType:'text',
+		async: false,
+		success:function(msg){
+			 var result = eval("("+msg+")");
+			 selectItems1.items = result.items; 
+		},
+		error:function(){ 
+		} 
+	});
+}
+//对应属性FORMAT
+function formatUrlItem(value){
+	var tempValue =value;
+	var result =tempValue;
+	if (tempValue)  {	
+		$.each(selectItems1.items, function(i) {
+			 if(selectItems1.items[i].value+'' ==  tempValue+''){
+			 	result = selectItems1.items[i].text+''
+			 	return result;
+			 }
+		});
+	} else { 
+		result = '';
+	}
+	return result;
+}
+*/
+
+
+//////////////////////////////////////////显示数据////////////////////////////////////////
+var _dagagrid_listdata_%%subpackage%%_%%Model%% = $('#dagagrid_listdata_%%subpackage%%_%%Model%%');
+_dagagrid_listdata_%%subpackage%%_%%Model%%.datagrid( {
+	nowrap : false,
+	striped : true,
+	border : false,
+	fit:true,
+	fitColumns : true,
+	collapsible : false,
+	remoteSort : false,
+	singleSelect : false,
+	checkOnSelect  : true,
+	pagination : true,
+	pagePosition:'bottom',
+	pageNumber:1,
+	pageSize:20,
+	pageList:[20,40,100,500,1000],
+	rownumbers : true,
+	loadMsg:'数据加载中,请稍后……',
+	url : '<%=basePath%>ajax/common_ajax%%Model%%_list',
+	columns : [[
+	{	field : 'seqid',
+	title : '选择',
+	width : 120,
+	align : 'left' ,
+	checkbox:true
+}, 
+
+%%jsp_fields_list%%
+
+{	field : 'rownumber',
+	title : '操作',
+	width : 120,
+	formatter : function(value,row, index) {
+		var s = '<a class="easyui-linkbutton" href="javascript:void(0);" onclick="opear_listdata_%%subpackage%%_%%Model%%_operaType('+index+');"  >&nbsp;</a>';
+		return s ;
+	}
+}]],
+	toolbar:'#toolbar_listdata_%%subpackage%%_%%Model%%',
+	onLoadSuccess: function (data){
+	    if(data.result >=300){
+	    	globalOnMessage(null,data);
+	    }
+	},
+	onLoadError: function (data){
+	    	globalOnMessage(null,data);
+	}
+});
+//////////////////////////////////////////查询操作////////////////////////////////////////
+function search_listdata_%%subpackage%%_%%Model%%() {
+	_dagagrid_listdata_%%subpackage%%_%%Model%%.datagrid("load", helperSerializeObject($('#searchform_listdata_%%subpackage%%_%%Model%%')));
+}
+////////////////////////////////////////初使SELECT////////////////////////////////////////
+helperSelectInits('#searchtable_listdata_%%subpackage%%_%%Model%%');
+//////////////////////////////////////////清空查询条件////////////////////////////////////////
+function clear_listdata_%%subpackage%%_%%Model%%() {
+	$('#searchform_listdata_%%subpackage%%_%%Model%% input').val('');
+	helperSelectInits('#searchtable_listdata_%%subpackage%%_%%Model%%');
+	_dagagrid_listdata_%%subpackage%%_%%Model%%.datagrid('load',{});
+}
+
+//////////////////////////////////////////添加 更新 删除操作////////////////////////////////////////
+function opear_listdata_%%subpackage%%_%%Model%%(type){
+	var row = _dagagrid_listdata_%%subpackage%%_%%Model%%.datagrid('getSelected');
+	var seqid = 0;
+	if(type>1 ){
+		if(row){
+			seqid = row.seqid;
+		}else{
+			seqid = 0;
+			$.messager.alert('提示','请先选择一行数据！')
+			return;
+		}
+	}
+	if(type==1 || type == 2){
+		$('<div id="dialog_listdata_%%subpackage%%_%%Model%%"/>').dialog({    
+			title: (type==1 ? '添加' : '更新') + '操作',    
+			width: 800,    
+			height: 500,    
+			closed: false,    
+			cache: false,    
+			href: '<%=basePath%>%%rootdir%%/%%subpackage%%/%%model%%/item_input%%Model%%.jsp?opera='+type+'&seqid='+seqid,
+			modal: true,
+			buttons: [{
+					text:'保存',
+					iconCls:'icon-ok',
+					handler:function(){
+						onAjaxSubmit_input_%%subpackage%%_%%Model%%();
+					}
+				},{
+					text:'重置',
+					handler:function(){
+						onReset_input_%%subpackage%%_%%Model%%();
+					}
+				},{
+					text:'关闭',
+					handler:function(){
+						onClose_input_%%subpackage%%_%%Model%%();
+					}
+				}],
+			onClose: function(){
+				$(this).dialog('destroy');
+			}   
+		}).dialog('center'); 
+	}else
+	if(type==3){ 
+		$.messager.confirm('删除提示', '您确定要执行删除操作?', function(r){
+			if (r){
+					var rows = _dagagrid_listdata_%%subpackage%%_%%Model%%.datagrid('getSelections'); 
+					var removeListIds = '';
+					$.each(rows,function(i){
+						removeListIds=removeListIds+'@'+rows[i].seqid;
+					});
+					////data:'%%model%%.seqid='+seqid,单个删除 
+					////data:'removeListIds='+removeListIds, 批量删除
+				  	$.ajax({
+						type:'post',
+						url: "<%=basePath%>ajax/common_ajax%%Model%%_deletes",
+						data:'removeListIds='+removeListIds,
+						dataType:'json',
+						success:function(info){	
+							search_listdata_%%subpackage%%_%%Model%%();
+					  		globalOnMessage(null,info);
+						},
+					 	error:function(errinfo){ 
+					 		globalOnError(errinfo);
+					 	}
+					}); 
+			}
+		});
+	} 
+}
+//////////////////////////////////////////导出数据操作////////////////////////////////////////
+function export_listdata_%%subpackage%%_%%Model%%() {
+	$.ajax( {
+		type : 'post',
+		url : '<%=basePath%>ajax/common_ajax%%Model%%_excel',
+		data: helperSerializeObject($('#searchform_listdata_%%subpackage%%_%%Model%%')),
+		dataType : 'json',
+		success : function(info) {
+			if(info.result==201){
+				window.location.href="<%=basePath%>download/excel/" + info.downloadUrl;
+			}else{
+				globalOnMessage(null,info);
+			}
+		}
+	});
+}
+////////////////////////////////////////操作调用方法(非必须)////////////////////////////////////////
+/*
+function opear_listdata_%%subpackage%%_%%Model%%_operaType(index){
+	_dagagrid_listdata_%%subpackage%%_%%Model%%.datagrid('unselectAll').datagrid('selectRow',index);
+	var row = _dagagrid_listdata_%%subpackage%%_%%Model%%.datagrid('getSelected');
+	var seqid = 0;
+	if(row){
+		seqid = row.seqid;
+	}else{
+		seqid = 0;
+		$.messager.alert('提示','请先选择一行数据！')
+		return;
+	}
+	$('<div id="opear_listdata_%%subpackage%%_%%Model%%_operaType"/>').dialog({    
+			title: '['+row.rolename+']operaType',    
+			width: 800,    
+			height: 500,    
+			closed: false,    
+			cache: false,    
+			href: '<%=basePath%>pages/%%subpackage%%/%%model%%/item_data%%Model%%.jsp?seqid='+seqid,
+			modal: true,
+			onClose: function(){
+				$(this).dialog('destroy');
+			}   
+		}).dialog('center'); 
+}
+*/
+////////////////////////////////////////切换是否显示查询条件////////////////////////////////////////
+function condition_listdata_%%subpackage%%_%%Model%%(){
+	var t = $('#searchtable_listdata_%%subpackage%%_%%Model%%');
+	var f = $('#searchform_listdata_%%subpackage%%_%%Model%%');
+	var d = $('#dagagrid_listdata_%%subpackage%%_%%Model%%');
+	t.toggle();
+	var w = d.parent().attr("width") -t.attr("width");
+	var h = d.parent().attr("height")-t.attr("height") ;
+	d.datagrid('resize', {
+		width:function(){return w},
+		height:function(){return h}
+	});
+}
+</script>

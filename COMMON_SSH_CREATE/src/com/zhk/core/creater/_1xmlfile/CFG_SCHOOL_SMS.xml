@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.cfg</packageName>
+    <className>CfgSchoolSms</className>
+    <objectName>cfgSchoolSms</objectName>
+    <tableName>CFG_SCHOOL_SMS</tableName>
+    <prefix>cfg</prefix>
+    <colunm checkType="text" format="text" header="1" min="0" max="10" example="" value="value" text="text">
+        <column>SEQID</column>
+        <label>SEQID lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>seqid</field>
+        <getMethod>getSeqid</getMethod>
+        <setMethod>setSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCH_SEQID</column>
+        <label>SCH_SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schSeqid</field>
+        <getMethod>getSchSeqid</getMethod>
+        <setMethod>setSchSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>UNICOM_STATUS</column>
+        <label>UNICOM_STATUS lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>unicomStatus</field>
+        <getMethod>getUnicomStatus</getMethod>
+        <setMethod>setUnicomStatus</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>TELECOM_STATUS</column>
+        <label>TELECOM_STATUS lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>telecomStatus</field>
+        <getMethod>getTelecomStatus</getMethod>
+        <setMethod>setTelecomStatus</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>MOBILE_STATUS</column>
+        <label>MOBILE_STATUS lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>mobileStatus</field>
+        <getMethod>getMobileStatus</getMethod>
+        <setMethod>setMobileStatus</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>UNICOM_POINT</column>
+        <label>UNICOM_POINT lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>unicomPoint</field>
+        <getMethod>getUnicomPoint</getMethod>
+        <setMethod>setUnicomPoint</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>TELECOM_POINT</column>
+        <label>TELECOM_POINT lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>telecomPoint</field>
+        <getMethod>getTelecomPoint</getMethod>
+        <setMethod>setTelecomPoint</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>MOBILE_POINT</column>
+        <label>MOBILE_POINT lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>mobilePoint</field>
+        <getMethod>getMobilePoint</getMethod>
+        <setMethod>setMobilePoint</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SINGLE_UNICOM</column>
+        <label>SINGLE_UNICOM lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>singleUnicom</field>
+        <getMethod>getSingleUnicom</getMethod>
+        <setMethod>setSingleUnicom</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SINGLE_TELECOM</column>
+        <label>SINGLE_TELECOM lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>singleTelecom</field>
+        <getMethod>getSingleTelecom</getMethod>
+        <setMethod>setSingleTelecom</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SINGLE_MOBILE</column>
+        <label>SINGLE_MOBILE lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>singleMobile</field>
+        <getMethod>getSingleMobile</getMethod>
+        <setMethod>setSingleMobile</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

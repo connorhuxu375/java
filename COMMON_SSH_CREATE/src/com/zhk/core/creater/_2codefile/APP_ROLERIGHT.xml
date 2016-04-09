@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.zhk.core.app</packageName>
+    <className>AppRoleright</className>
+    <objectName>appRoleright</objectName>
+    <tableName>APP_ROLERIGHT</tableName>
+    <prefix>app</prefix>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ROLETYPE</column>
+        <label>ROLETYPE</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>roletype</field>
+        <getMethod>getRoletype</getMethod>
+        <setMethod>setRoletype</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ROLE_SEQID</column>
+        <label>ROLE_SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>roleSeqid</field>
+        <getMethod>getRoleSeqid</getMethod>
+        <setMethod>setRoleSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>APP_SEQID</column>
+        <label>APP_SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>appSeqid</field>
+        <getMethod>getAppSeqid</getMethod>
+        <setMethod>setAppSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ABLE_READ</column>
+        <label>ABLE_READ lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>ableRead</field>
+        <getMethod>getAbleRead</getMethod>
+        <setMethod>setAbleRead</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ABLE_MANAGER</column>
+        <label>ABLE_MANAGER lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>ableManager</field>
+        <getMethod>getAbleManager</getMethod>
+        <setMethod>setAbleManager</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

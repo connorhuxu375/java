@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.dev</packageName>
+    <className>DevIpcamType</className>
+    <objectName>devIpcamType</objectName>
+    <tableName>DEV_IPCAM_TYPE</tableName>
+    <prefix>dev</prefix>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SEQID</column>
+        <label>SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>seqid</field>
+        <getMethod>getSeqid</getMethod>
+        <setMethod>setSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>DESCRIBE</column>
+        <label>DESCRIBE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>describe</field>
+        <getMethod>getDescribe</getMethod>
+        <setMethod>setDescribe</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>ENCODE</column>
+        <label>ENCODE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>encode</field>
+        <getMethod>getEncode</getMethod>
+        <setMethod>setEncode</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>MAXCHAN</column>
+        <label>MAXCHAN lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>maxchan</field>
+        <getMethod>getMaxchan</getMethod>
+        <setMethod>setMaxchan</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>CPUTYPE</column>
+        <label>CPUTYPE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>cputype</field>
+        <getMethod>getCputype</getMethod>
+        <setMethod>setCputype</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>DEFAULT_DEVICE_NAME</column>
+        <label>DEFAULT_DEVICE_NAME lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>defaultDeviceName</field>
+        <getMethod>getDefaultDeviceName</getMethod>
+        <setMethod>setDefaultDeviceName</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>DEFAULT_DEVICE_PWD</column>
+        <label>DEFAULT_DEVICE_PWD lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>defaultDevicePwd</field>
+        <getMethod>getDefaultDevicePwd</getMethod>
+        <setMethod>setDefaultDevicePwd</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

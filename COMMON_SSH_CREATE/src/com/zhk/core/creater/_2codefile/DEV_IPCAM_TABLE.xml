@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.dev</packageName>
+    <className>DevIpcamTable</className>
+    <objectName>devIpcamTable</objectName>
+    <tableName>DEV_IPCAM_TABLE</tableName>
+    <prefix>dev</prefix>
+   
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCHOOL_ID</column>
+        <label>学校</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schoolId</field>
+        <getMethod>getSchoolId</getMethod>
+        <setMethod>setSchoolId</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>HAVE_PRIVATE</column>
+        <label>是否私有</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>havePrivate</field>
+        <getMethod>getHavePrivate</getMethod>
+        <setMethod>setHavePrivate</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>IPCAMID</column>
+        <label>设备ID</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>ipcamid</field>
+        <getMethod>getIpcamid</getMethod>
+        <setMethod>setIpcamid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>SOURCE</column>
+        <label>IP</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>source</field>
+        <getMethod>getSource</getMethod>
+        <setMethod>setSource</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>PORT</column>
+        <label>端口</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>port</field>
+        <getMethod>getPort</getMethod>
+        <setMethod>setPort</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>LOCALIP</column>
+        <label>内网IP</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>localip</field>
+        <getMethod>getLocalip</getMethod>
+        <setMethod>setLocalip</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ISONLINE</column>
+        <label>在线</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>isonline</field>
+        <getMethod>getIsonline</getMethod>
+        <setMethod>setIsonline</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>STATUS</column>
+        <label>状态</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>status</field>
+        <getMethod>getStatus</getMethod>
+        <setMethod>setStatus</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ORDER_ON</column>
+        <label>排序</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>orderOn</field>
+        <getMethod>getOrderOn</getMethod>
+        <setMethod>setOrderOn</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ISFIX</column>
+        <label>启用内网</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>isfix</field>
+        <getMethod>getIsfix</getMethod>
+        <setMethod>setIsfix</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>OSD</column>
+        <label>名称</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>osd</field>
+        <getMethod>getOsd</getMethod>
+        <setMethod>setOsd</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>MEDIASERVER_SEQID</column>
+        <label>流媒体</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>mediaserverSeqid</field>
+        <getMethod>getMediaserverSeqid</getMethod>
+        <setMethod>setMediaserverSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>MAXCHAN</column>
+        <label>最大通道</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>maxchan</field>
+        <getMethod>getMaxchan</getMethod>
+        <setMethod>setMaxchan</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>IPCAMENCODE</column>
+        <label>设备编码</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>ipcamencode</field>
+        <getMethod>getIpcamencode</getMethod>
+        <setMethod>setIpcamencode</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>DYNAMICDNS</column>
+        <label>动态域名</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>dynamicdns</field>
+        <getMethod>getDynamicdns</getMethod>
+        <setMethod>setDynamicdns</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>USERNAME</column>
+        <label>用户名</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>username</field>
+        <getMethod>getUsername</getMethod>
+        <setMethod>setUsername</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>PASSWORD</column>
+        <label>密码</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>password</field>
+        <getMethod>getPassword</getMethod>
+        <setMethod>setPassword</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>CH</column>
+        <label>通道号</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>ch</field>
+        <getMethod>getCh</getMethod>
+        <setMethod>setCh</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>MEDIA_PORT</column>
+        <label>媒体端口</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>mediaPort</field>
+        <getMethod>getMediaPort</getMethod>
+        <setMethod>setMediaPort</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>INFO_SEQID</column>
+        <label>设备信息</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>infoSeqid</field>
+        <getMethod>getInfoSeqid</getMethod>
+        <setMethod>setInfoSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>TYPE_SEQID</column>
+        <label>设备类型</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>typeSeqid</field>
+        <getMethod>getTypeSeqid</getMethod>
+        <setMethod>setTypeSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

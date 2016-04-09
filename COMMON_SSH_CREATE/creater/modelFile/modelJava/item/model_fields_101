@@ -1,0 +1,14 @@
+	  /**
+		*字串类型.请设置must  min format 及 example
+		*/
+	@CheckCondition(
+		infos="{label:'%%FieldLableVal%%',export:1}",
+		check="{type:'text',max:%%FieldMaxLen%%,min:2,must:1,format:'text',example:'%%FieldNameVal%%'}"  )
+	@Column(name="%%FieldColumn%%")
+	private   %%FieldType%%   %%FieldNameVal%%;
+	public void %%setMethodName%%(  %%FieldType%%  %%FieldNameVal%%){
+		 this.%%FieldNameVal%%=%%FieldNameVal%%;
+	}
+	public   %%FieldType%%   %%getMethodName%%(){
+		return %%FieldNameVal%%;
+	}

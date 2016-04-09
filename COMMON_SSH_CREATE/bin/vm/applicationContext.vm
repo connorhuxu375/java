@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+    <!-- ${T.className}   DAO -->
+    <bean id="${T.objectName}Dao" class="${T.packageName}.${T.className}DaoImpl" parent="daoBase" >
+    </bean>
+    <!-- ${T.objectName}  SERVICE -->
+    <bean id="${T.objectName}Service" class="${T.packageName}.${T.className}ServiceImpl"  parent="serviceBase">
+    	<!--RESET [ServiceBaseImpl]  FIELD [DaoBaseImpl] FOR SUB CLASS [${T.objectName}DaoImpl] 
+    		ABLE CALL OVERRIDE METHOD
+    	-->
+    	<property name="daoBase" ref="${T.objectName}Dao"></property>
+    </bean>
+    <!-- ${T.objectName}  ACTION -->
+    <bean id="ajax${T.className}Action" scope="prototype" class="${T.packageName}.Ajax${T.className}Action">
+        <constructor-arg ref="${T.objectName}Service" />
+    </bean>
+</beans>

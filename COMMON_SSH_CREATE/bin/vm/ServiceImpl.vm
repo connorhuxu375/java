@@ -1,0 +1,40 @@
+package ${T.packageName};
+ 
+import org.apache.log4j.Logger;
+ 
+import com.zhk.core.base.daobase.DaoBase;
+import com.zhk.core.base.servicebase.ServiceBaseImpl;
+import com.zhk.core.base.modelbase.ModelBase;
+ 
+/**
+ * 
+ * 描述：${T.className}SERVER 接口实现
+ * @author	:${A.authorInfo}
+ * @version	:${A.version}
+ * @date	:${A.date}
+ * 说明:		:${A.note}
+ */
+public class ${T.className}ServiceImpl extends ServiceBaseImpl  implements ${T.className}Service {
+	public final  Logger log = Logger.getLogger(${T.className}ServiceImpl.class);
+	/**
+	 * 获取DAO的方法
+ 	 * @author	: ${A.authorInfo}
+ 	 * @version : ${A.version}
+ 	 * @date    : ${A.date}
+	 */
+	public ${T.className}Dao getDao(){
+		return (${T.className}Dao)this.getDaoBase();
+	}
+	
+	
+	/**************************************************
+	 * 其它DAO申明.设置SPRING注入 ,提供SERVICE层事物处理
+	 **************************************************/
+  	
+	 
+	 
+  	/**************************************************
+	 * 其它SERVER 方法实现
+	 **************************************************/
+  	
+}

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.zhk.core.dev</packageName>
+    <className>DevCardDevice</className>
+    <objectName>devCardDevice</objectName>
+    <tableName>DEV_CARD_DEVICE</tableName>
+    <prefix>dev</prefix>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SEQID</column>
+        <label>系列ID</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>seqid</field>
+        <getMethod>getSeqid</getMethod>
+        <setMethod>setSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCH_SEQID</column>
+        <label>学校ID</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schSeqid</field>
+        <getMethod>getSchSeqid</getMethod>
+        <setMethod>setSchSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="20" example="" value="value" text="text">
+        <column>ATT_ID</column>
+        <label>考勤机ID</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>attId</field>
+        <getMethod>getAttId</getMethod>
+        <setMethod>setAttId</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>USERNAME</column>
+        <label>用户名</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>username</field>
+        <getMethod>getUsername</getMethod>
+        <setMethod>setUsername</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>PASSWORD</column>
+        <label>密码</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>password</field>
+        <getMethod>getPassword</getMethod>
+        <setMethod>setPassword</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>REG_DATE</column>
+        <label>注册时间</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>regDate</field>
+        <getMethod>getRegDate</getMethod>
+        <setMethod>setRegDate</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>STATUS</column>
+        <label>状态</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>status</field>
+        <getMethod>getStatus</getMethod>
+        <setMethod>setStatus</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>HAVE_ONLINE</column>
+        <label>是否在线</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>haveOnline</field>
+        <getMethod>getHaveOnline</getMethod>
+        <setMethod>setHaveOnline</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>ATT_NAME</column>
+        <label>考勤机名称</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>attName</field>
+        <getMethod>getAttName</getMethod>
+        <setMethod>setAttName</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SMS_ABLE</column>
+        <label>是否发送短信</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>smsAble</field>
+        <getMethod>getSmsAble</getMethod>
+        <setMethod>setSmsAble</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>RECORD_CYCLE</column>
+        <label>记录周期</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>recordCycle</field>
+        <getMethod>getRecordCycle</getMethod>
+        <setMethod>setRecordCycle</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SEND_SMS_CYCLE</column>
+        <label>短信周期</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>sendSmsCycle</field>
+        <getMethod>getSendSmsCycle</getMethod>
+        <setMethod>setSendSmsCycle</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="100" example="" value="value" text="text">
+        <column>TIME_DOT</column>
+        <label>TIME_DOT lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>timeDot</field>
+        <getMethod>getTimeDot</getMethod>
+        <setMethod>setTimeDot</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="100" example="" value="value" text="text">
+        <column>DATETIME_CFG</column>
+        <label>启用时间段</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>datetimeCfg</field>
+        <getMethod>getDatetimeCfg</getMethod>
+        <setMethod>setDatetimeCfg</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="100" example="" value="value" text="text">
+        <column>WEEKS</column>
+        <label>周配置</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>weeks</field>
+        <getMethod>getWeeks</getMethod>
+        <setMethod>setWeeks</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>SYLASTTIME</column>
+        <label>最后同步时间</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>sylasttime</field>
+        <getMethod>getSylasttime</getMethod>
+        <setMethod>setSylasttime</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>IS_YOUYUANKA</column>
+        <label>是否有卡源</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>isYouyuanka</field>
+        <getMethod>getIsYouyuanka</getMethod>
+        <setMethod>setIsYouyuanka</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>NOTIFY_FLAG</column>
+        <label>离线通知标志</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>notifyFlag</field>
+        <getMethod>getNotifyFlag</getMethod>
+        <setMethod>setNotifyFlag</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>CERT</column>
+        <label>证书</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>cert</field>
+        <getMethod>getCert</getMethod>
+        <setMethod>setCert</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>UNCARDSMS_ABLE</column>
+        <label>启用未打卡管理</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>uncardsmsAble</field>
+        <getMethod>getUncardsmsAble</getMethod>
+        <setMethod>setUncardsmsAble</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

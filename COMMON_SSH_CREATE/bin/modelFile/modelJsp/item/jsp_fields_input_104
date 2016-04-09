@@ -1,0 +1,8 @@
+<tr height="30"><!-- date form --> 
+	<td>%%FieldLabelVal%%</td>
+	<td>:</td>	
+	<td>
+		<input readonly="readonly"   id="%%model%%_%%FieldNameVal%%" name='%%model%%.%%FieldNameVal%%' _label='%%FieldLabelVal%%' _value=''  _check='<%=CheckHelper.getCheck(%%Model%%.class,"%%FieldNameVal%%")%>'  _items='<%=CheckHelper.getItems(%%Model%%.class,"%%FieldNameVal%%")%>' >
+ 		<img onclick="WdatePicker({el:'%%model%%_%%FieldNameVal%%',dateFmt:'yyyy-MM-dd HH:mm:ss'})" src="<%=basePath %>resource/img/setdate.png" width="16" height="16" align="absmiddle">
+	</td>
+</tr> 

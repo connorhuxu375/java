@@ -1,0 +1,7 @@
+	   /**
+		*Ä£ºý²éÑ¯
+		*/
+		if(StringUtils.hasText(%%model%%.%%getMethodName%%()) ){
+			condHql.append(" and p.%%FieldNameVal%%  like ? ");
+			condParam.add("%"+%%model%%.%%getMethodName%%().trim()+"%");
+		}

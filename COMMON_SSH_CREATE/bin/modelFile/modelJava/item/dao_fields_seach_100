@@ -1,0 +1,7 @@
+	   /**
+		*下拉框选择查询,兼容字串及原始类型
+		*/
+		if(%%model%%.%%getMethodName%%() != null  && !%%model%%.%%getMethodName%%().toString().equals("-999")){
+			condHql.append(" and  p.%%FieldNameVal%%    =  ? ");
+			condParam.add(%%model%%.%%getMethodName%%());
+		}

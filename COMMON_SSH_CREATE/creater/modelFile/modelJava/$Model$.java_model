@@ -1,0 +1,59 @@
+package com.nvm.%%author%%.%%subpackage%%.action;
+
+import java.io.Serializable;
+import java.sql.Timestamp;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+import org.apache.struts2.json.annotations.JSON;
+
+import com.zhk.core.base.modelbase.ModelBase;
+import com.zhk.core.base.modelbase.anntation.AnnHelpers;
+import com.zhk.core.base.modelbase.anntation.CheckCondition;
+/**
+ * 
+ * 描述：%%Model%%ACTION 装载值对象
+ * @author	: %%authorInfo%%
+ * @version : %%version%%
+ * @date     : %%date%%
+ */
+@Entity
+@Table(name="%%TableName%%")
+@CheckCondition
+public class %%Model%%  extends ModelBase implements  Serializable {
+	@Override
+	public boolean isNull() {
+		return seqid == null || seqid <= 0;
+	}
+	@Override
+	public String toString() {
+		return AnnHelpers.modelBasetoString(this);
+	}
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer seqid;
+
+	/*****************************************
+	 * 重写  ModelBase 抽像方法
+	 ****************************************/   
+	public Integer getSeqid() {
+		return seqid;
+	}
+	/*****************************************
+	 * 重写 ModelBase 抽像方法
+	 ****************************************/ 
+	public void setSeqid(Integer seqid) {
+		this.seqid = seqid;
+	}
+
+	/*****************************************
+	 * 其它字段 由据数据库自动生成. 注意修改 @CheckCondition
+	 ****************************************/  
+	 %%GetSetFields%%
+}

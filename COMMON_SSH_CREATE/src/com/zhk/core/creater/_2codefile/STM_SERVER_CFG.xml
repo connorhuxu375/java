@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.dev</packageName>
+    <className>StmServerCfg</className>
+    <objectName>stmServerCfg</objectName>
+    <tableName>STM_SERVER_CFG</tableName>
+    <prefix>dev</prefix>
+   
+    <colunm checkType="text" format="text" header="1" min="0" max="64" example="" value="value" text="text">
+        <column>IPADDRESS</column>
+        <label>服务器地址</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>ipaddress</field>
+        <getMethod>getIpaddress</getMethod>
+        <setMethod>setIpaddress</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCHJ_SEQID</column>
+        <label>学校</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schjSeqid</field>
+        <getMethod>getSchjSeqid</getMethod>
+        <setMethod>setSchjSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="256" example="" value="value" text="text">
+        <column>DESCRIBE</column>
+        <label>服务器名称</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>describe</field>
+        <getMethod>getDescribe</getMethod>
+        <setMethod>setDescribe</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>SERVER_TYPE</column>
+        <label>服务器类型</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>serverType</field>
+        <getMethod>getServerType</getMethod>
+        <setMethod>setServerType</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>PORT</column>
+        <label>端口</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>port</field>
+        <getMethod>getPort</getMethod>
+        <setMethod>setPort</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>PRIORITY</column>
+        <label>优先级</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>priority</field>
+        <getMethod>getPriority</getMethod>
+        <setMethod>setPriority</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="30" example="" value="value" text="text">
+        <column>ACCOUNT</column>
+        <label>帐号</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>account</field>
+        <getMethod>getAccount</getMethod>
+        <setMethod>setAccount</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="8" example="" value="value" text="text">
+        <column>ADD_TIME</column>
+        <label>添加时间</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>addTime</field>
+        <getMethod>getAddTime</getMethod>
+        <setMethod>setAddTime</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

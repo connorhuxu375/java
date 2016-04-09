@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.dev</packageName>
+    <className>StmFixedCfg</className>
+    <objectName>stmFixedCfg</objectName>
+    <tableName>STM_Fixed_CFG</tableName>
+    <prefix>dev</prefix>
+    
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCHOOL_SEQID</column>
+        <label>学校</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schoolSeqid</field>
+        <getMethod>getSchoolSeqid</getMethod>
+        <setMethod>setSchoolSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>PRIORITY</column>
+        <label>优先级</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>priority</field>
+        <getMethod>getPriority</getMethod>
+        <setMethod>setPriority</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

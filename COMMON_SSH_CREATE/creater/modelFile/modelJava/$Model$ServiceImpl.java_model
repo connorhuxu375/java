@@ -1,0 +1,48 @@
+package com.nvm.%%author%%.%%subpackage%%.service;
+ 
+import org.apache.log4j.Logger;
+ 
+import com.zhk.core.base.daobase.DaoBase;
+import com.zhk.core.base.servicebase.ServiceBaseImpl;
+import com.zhk.core.base.modelbase.ModelBase;
+import com.nvm.%%author%%.%%subpackage%%.dao.%%Model%%Dao;
+ 
+/**
+ * 描述：%%Model%%SERVER 接口实现
+ * @author	: %%authorInfo%%
+ * @version : %%version%%
+ * @date     : %%date%%
+ */
+public class %%Model%%ServiceImpl extends ServiceBaseImpl  implements %%Model%%Service {
+	public final  Logger log = Logger.getLogger(%%Model%%ServiceImpl.class);
+	/**
+	 * 获取DAO的方法
+ 	 * @author	: %%author%%
+ 	 * @version : %%version%%
+ 	 * @date    : %%date%%
+	 */
+	public %%Model%%Dao getDao(){
+		return (%%Model%%Dao)this.getDaoBase();
+	}
+	
+	
+	/**************************************************
+	 * 其它DAO申明.设置SPRING注入 ,提供SERVICE层事物处理
+	 **************************************************/
+  	
+  	
+  	/**************************************************** 
+	 *ServiceBaseImpl  默认实现,可直接调用
+	 *save(ModelBase)
+	 *delete(int)
+	 *deleteBatch(List)
+	 *getOne(id)
+	 *getPagination(ModelBase)//由DAO得写分页查询
+	 ***************************************************/ 
+	 
+	 
+  	/**************************************************
+	 * 其它SERVER 方法实现
+	 **************************************************/
+  	
+}

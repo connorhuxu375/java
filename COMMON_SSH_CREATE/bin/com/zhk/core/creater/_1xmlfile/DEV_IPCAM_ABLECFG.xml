@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.dev</packageName>
+    <className>DevIpcamAblecfg</className>
+    <objectName>devIpcamAblecfg</objectName>
+    <tableName>DEV_IPCAM_ABLECFG</tableName>
+    <prefix>dev</prefix>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SEQID</column>
+        <label>SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>seqid</field>
+        <getMethod>getSeqid</getMethod>
+        <setMethod>setSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>TAB_SEQID</column>
+        <label>TAB_SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>tabSeqid</field>
+        <getMethod>getTabSeqid</getMethod>
+        <setMethod>setTabSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>IS_USE</column>
+        <label>IS_USE lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>isUse</field>
+        <getMethod>getIsUse</getMethod>
+        <setMethod>setIsUse</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="7" example="" value="value" text="text">
+        <column>WEEK_ROLE</column>
+        <label>WEEK_ROLE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>weekRole</field>
+        <getMethod>getWeekRole</getMethod>
+        <setMethod>setWeekRole</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>TIME_DOT</column>
+        <label>TIME_DOT lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>timeDot</field>
+        <getMethod>getTimeDot</getMethod>
+        <setMethod>setTimeDot</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="53" example="" value="value" text="text">
+        <column>TIME_CFG</column>
+        <label>TIME_CFG lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>timeCfg</field>
+        <getMethod>getTimeCfg</getMethod>
+        <setMethod>setTimeCfg</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

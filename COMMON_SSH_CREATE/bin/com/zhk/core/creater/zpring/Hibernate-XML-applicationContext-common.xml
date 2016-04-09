@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+ -->
+<beans  xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:context="http://www.springframework.org/schema/context" 
+		xmlns:aop="http://www.springframework.org/schema/aop" 
+		xmlns:tx="http://www.springframework.org/schema/tx" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		  http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
+		  http://www.springframework.org/schema/context 
+		  http://www.springframework.org/schema/context/spring-context-2.5.xsd 
+		  http://www.springframework.org/schema/aop 
+		  http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+		  http://www.springframework.org/schema/tx
+		  http://www.springframework.org/schema/tx/spring-tx-2.5.xsd "
+		  >
+	<!--        spring 的基础配置 start    -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+	</bean>
+	 
+	
+	<!-- 配置分页操作 -->
+	<bean id="pagination" class="com.zhk.core.base.dao.AbstractPagination">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<!-- 配置baseDao -->
+	<bean name="baseDao" class="com.zhk.core.base.dao.BaseDaoImpl"  parent="pagination" />
+
+	<!-- 事务管理器 org.springframework.orm.hibernate3.HibernateTransactionManager -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">	<!-- 为事务管理器注入sessionFactory -->
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<!-- 拦截器 -->
+	<bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor" >
+		<property name="transactionManager">
+			<ref bean="transactionManager"/>
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<!-- 指定事务策略PROPAGATION_REQUIRED，代表如果当前方法没有事务的话，自动加入事务  -->
+				<prop key="logAdd*">PROPAGATION_REQUIRES_NEW</prop>
+				<prop key="flexLogout*">PROPAGATION_REQUIRED</prop>
+				
+				<prop key="flexAdd*">PROPAGATION_REQUIRED</prop>
+				<prop key="flexUpdate*">PROPAGATION_REQUIRED</prop>
+				<prop key="flexDelete*">PROPAGATION_REQUIRED</prop>
+				<prop key="flexGet*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="flexShowAll*">PROPAGATION_REQUIRED,readOnly</prop>
+				
+				<prop key="flexIsExist*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+	  
+	<!-- 自动代理 hw-->
+	<bean id="autoBeanNameProxyCreator"
+	class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="interceptorNames">
+			<list>
+				<value>transactionInterceptor</value>
+			</list>
+		</property>
+		<property name="beanNames">
+			 <list>
+			 	<value>*ServiceImpl</value>
+			 </list>
+		</property>
+	</bean>
+	<!--         spring的基础配置  end     	 -->
+</beans>

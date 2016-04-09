@@ -1,0 +1,84 @@
+package com.nvm.%%author%%.%%subpackage%%.test;
+
+import org.apache.log4j.Logger;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.nvm.%%author%%.%%subpackage%%.action.Ajax%%Model%%Action;
+import com.nvm.%%author%%.%%subpackage%%.action.%%Model%%;
+/** 
+ * 
+ * √Ë ˆ£∫Test%%Model%%ACTION
+ * @author	: %%authorInfo%%
+ * @version : %%version%%
+ * @date     : %%date%%
+ */
+public class Test%%Model%%Action  {
+	public final static  Logger log = Logger.getLogger(Test%%Model%%Action.class);
+	ApplicationContext context;
+	Ajax%%Model%%Action action ;
+	@Before
+	public   void inits(){
+		try{
+			context = new ClassPathXmlApplicationContext(
+			"com/nvm/rock/zpring/application*.xml");
+			action = (Ajax%%Model%%Action)context.getBean("ajax%%Model%%Action");
+			log.info("inits application : "+(context!=null));
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	@After
+	public   void print(){
+		System.out.println("==========================================");
+		System.out.println(action.getJsonResult());
+		if(!action.getJsonResult().getRows().isEmpty()){
+			System.out.println(action.getJsonResult().getRows());
+		}
+		System.out.println("==========================================");
+	}
+	
+	@Test  
+	public   void testSave() throws Exception{
+		%%Model%% %%model%% = (%%Model%%)action.getModel();
+		%%model%%.setSeqid(1);//update
+		//other fields
+		action.save();
+		//
+	}
+	@Test  
+	public   void testFind() throws Exception{
+		%%Model%% %%model%% = (%%Model%%)action.getModel();
+		// find id 
+		%%model%%.setSeqid(1);
+		action.find();
+	}
+	@Test  
+	public   void testList() throws Exception{
+		%%Model%% %%model%% = (%%Model%%)action.getModel();
+		// select fields 
+		action.list();
+	}
+	
+	@Test  
+	public   void testDelete() throws Exception{
+		%%Model%% %%model%% = (%%Model%%)action.getModel();
+		//delete id 
+		%%model%%.setSeqid(1);
+		action.delete();
+	}
+	
+	@Test  
+	public   void testDeletes() throws Exception{
+		%%Model%% %%model%% = (%%Model%%)action.getModel();
+		// delete ids  format : 4@7
+		action.setRemoveListIds("4@7");
+		action.deletes();
+	}
+	
+	
+	
+}

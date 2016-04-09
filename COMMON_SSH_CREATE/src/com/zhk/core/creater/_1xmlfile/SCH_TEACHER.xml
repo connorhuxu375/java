@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.zhk.core.sch</packageName>
+    <className>SchTeacher</className>
+    <objectName>schTeacher</objectName>
+    <tableName>SCH_TEACHER</tableName>
+    <prefix>sch</prefix>
+    
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCH_SEQID</column>
+        <label>ѧУID</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schSeqid</field>
+        <getMethod>getSchSeqid</getMethod>
+        <setMethod>setSchSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>TEACHER_AGE</column>
+        <label>TEACHER_AGE lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>teacherAge</field>
+        <getMethod>getTeacherAge</getMethod>
+        <setMethod>setTeacherAge</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>SYS_CODE</column>
+        <label>SYS_CODE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>sysCode</field>
+        <getMethod>getSysCode</getMethod>
+        <setMethod>setSysCode</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>JOB_TITLE</column>
+        <label>JOB_TITLE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>jobTitle</field>
+        <getMethod>getJobTitle</getMethod>
+        <setMethod>setJobTitle</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>EDUCATION</column>
+        <label>EDUCATION lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>education</field>
+        <getMethod>getEducation</getMethod>
+        <setMethod>setEducation</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>ITEM</column>
+        <label>ITEM lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>item</field>
+        <getMethod>getItem</getMethod>
+        <setMethod>setItem</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>SPECIALTY</column>
+        <label>SPECIALTY lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>specialty</field>
+        <getMethod>getSpecialty</getMethod>
+        <setMethod>setSpecialty</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="4000" example="" value="value" text="text">
+        <column>DETAIL_INFO</column>
+        <label>DETAIL_INFO lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>detailInfo</field>
+        <getMethod>getDetailInfo</getMethod>
+        <setMethod>setDetailInfo</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

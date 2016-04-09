@@ -1,0 +1,12 @@
+	@CheckCondition(
+		 infos="{label:'%%FieldLableVal%%',export:1}"
+		,check="{type:'select',header:1,must:1,text:'text',value:'value'}" 
+		,items = "{url:'',items:[{text:'下拉值1',value:'1'},{text:'下拉值2',value:'2'}]}" )
+	@Column(name="%%FieldColumn%%")
+	private   %%FieldType%%   %%FieldNameVal%%;
+	public void %%setMethodName%%(  %%FieldType%%  %%FieldNameVal%%){
+		 this.%%FieldNameVal%%=%%FieldNameVal%%;
+	}
+	public   %%FieldType%%   %%getMethodName%%(){
+		return %%FieldNameVal%%;
+	}

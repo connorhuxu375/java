@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.view</packageName>
+    <className>ViewAccStudentMap</className>
+    <objectName>viewAccStudentMap</objectName>
+    <tableName>VIEW_ACC_STUDENT_MAP</tableName>
+    <prefix>view</prefix>
+   
+    <colunm text="text" value="value" example="" max="8" min="0" header="1" format="datetime" checkType="datetime">
+        <column>UPDATETIME</column>
+        <label>更新时间</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>updatetime</field>
+        <getMethod>getUpdatetime</getMethod>
+        <setMethod>setUpdatetime</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="4" min="0" header="1" format="int" checkType="select">
+        <column>SCH1_SEQID</column>
+        <label>学校id1</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>sch1Seqid</field>
+        <getMethod>getSch1Seqid</getMethod>
+        <setMethod>setSch1Seqid</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="4" min="0" header="1" format="int" checkType="select">
+        <column>ROLE_SEQID</column>
+        <label>角色</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>roleSeqid</field>
+        <getMethod>getRoleSeqid</getMethod>
+        <setMethod>setRoleSeqid</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="4" min="0" header="1" format="int" checkType="select">
+        <column>ACC_SEQID</column>
+        <label>帐号id</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>accSeqid</field>
+        <getMethod>getAccSeqid</getMethod>
+        <setMethod>setAccSeqid</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="4" min="0" header="1" format="int" checkType="select">
+        <column>USER_SEQID</column>
+        <label>用户id</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>userSeqid</field>
+        <getMethod>getUserSeqid</getMethod>
+        <setMethod>setUserSeqid</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="50" min="0" header="1" format="text" checkType="text">
+        <column>ACCOUNT</column>
+        <label>帐号</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>account</field>
+        <getMethod>getAccount</getMethod>
+        <setMethod>setAccount</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="50" min="0" header="1" format="text" checkType="text">
+        <column>PASSWORD</column>
+        <label>密码</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>password</field>
+        <getMethod>getPassword</getMethod>
+        <setMethod>setPassword</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="4" min="0" header="1" format="int" checkType="select">
+        <column>STATUS</column>
+        <label>状态</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>status</field>
+        <getMethod>getStatus</getMethod>
+        <setMethod>setStatus</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="4" min="0" header="1" format="int" checkType="select">
+        <column>SCH2_SEQID</column>
+        <label>学校id2</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>sch2Seqid</field>
+        <getMethod>getSch2Seqid</getMethod>
+        <setMethod>setSch2Seqid</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="8" min="0" header="1" format="datetime" checkType="datetime">
+        <column>STUDY_START</column>
+        <label>开始时间</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>studyStart</field>
+        <getMethod>getStudyStart</getMethod>
+        <setMethod>setStudyStart</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="30" min="0" header="1" format="text" checkType="text">
+        <column>EDU_CODE</column>
+        <label>教育编码</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>eduCode</field>
+        <getMethod>getEduCode</getMethod>
+        <setMethod>setEduCode</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="50" min="0" header="1" format="text" checkType="text">
+        <column>SYS_CODE</column>
+        <label>系统编码</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>sysCode</field>
+        <getMethod>getSysCode</getMethod>
+        <setMethod>setSysCode</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="20" min="0" header="1" format="text" checkType="text">
+        <column>STUDENT_NUMBER</column>
+        <label>学号</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>studentNumber</field>
+        <getMethod>getStudentNumber</getMethod>
+        <setMethod>setStudentNumber</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="20" min="0" header="1" format="text" checkType="text">
+        <column>CARD_ID</column>
+        <label>卡号</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>cardId</field>
+        <getMethod>getCardId</getMethod>
+        <setMethod>setCardId</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="4" min="0" header="1" format="int" checkType="select">
+        <column>SEX</column>
+        <label>性别</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>sex</field>
+        <getMethod>getSex</getMethod>
+        <setMethod>setSex</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="50" min="0" header="1" format="text" checkType="text">
+        <column>STUDENT_NAME</column>
+        <label>学生名字</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>studentName</field>
+        <getMethod>getStudentName</getMethod>
+        <setMethod>setStudentName</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="8" min="0" header="1" format="datetime" checkType="datetime">
+        <column>BIRTHDAY</column>
+        <label>生日</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>birthday</field>
+        <getMethod>getBirthday</getMethod>
+        <setMethod>setBirthday</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="4" min="0" header="1" format="int" checkType="select">
+        <column>SSCM_SEQID</column>
+        <label>SSCM_SEQID </label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>sscmSeqid</field>
+        <getMethod>getSscmSeqid</getMethod>
+        <setMethod>setSscmSeqid</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="4" min="0" header="1" format="int" checkType="select">
+        <column>GRD_SEQID</column>
+        <label>年级id</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>grdSeqid</field>
+        <getMethod>getGrdSeqid</getMethod>
+        <setMethod>setGrdSeqid</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="50" min="0" header="1" format="text" checkType="text">
+        <column>GRADE_NAME</column>
+        <label>年级名</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>gradeName</field>
+        <getMethod>getGradeName</getMethod>
+        <setMethod>setGradeName</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="4" min="0" header="1" format="int" checkType="select">
+        <column>GRADE_LEVAL</column>
+        <label>年级等级</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>gradeLeval</field>
+        <getMethod>getGradeLeval</getMethod>
+        <setMethod>setGradeLeval</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="4" min="0" header="1" format="int" checkType="select">
+        <column>CLS_SEQID</column>
+        <label>班级id </label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>clsSeqid</field>
+        <getMethod>getClsSeqid</getMethod>
+        <setMethod>setClsSeqid</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="200" min="0" header="1" format="text" checkType="text">
+        <column>CLASS_NAME</column>
+        <label>班级名</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>className</field>
+        <getMethod>getClassName</getMethod>
+        <setMethod>setClassName</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+    <colunm text="text" value="value" example="" max="4" min="0" header="1" format="int" checkType="select">
+        <column>ORDER_NO</column>
+        <label>排序 </label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>orderNo</field>
+        <getMethod>getOrderNo</getMethod>
+        <setMethod>setOrderNo</setMethod>
+        <generation pojo="true" detail="true" input="true" list="true" sort="true" search="true"/>
+    </colunm>
+</Table>

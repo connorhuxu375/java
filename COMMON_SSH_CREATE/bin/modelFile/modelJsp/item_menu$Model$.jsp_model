@@ -1,0 +1,31 @@
+<%@page 	language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@include 	file="/import/include/import.jsp" %>
+<%@page 	import="com.nvm.%%author%%.%%subpackage%%.action.*"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!-- 
+  @author  : %%authorInfo%%
+  @version : %%version%%
+  @date     : %%date%%
+-->
+<div class="menu_vertical" align="center">
+	<ul>
+		<li>
+			<a href="javascript:void(0)" target="_top" onclick="openList()">显示列表</a>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	function openList(){
+		$('#item_tab%%model%%').tabs('close',0);
+		$('#item_tab%%model%%').tabs('add',{
+			title:'显示列表',
+			fit:true,
+			href:'<%=basePath%>%%rootdir%%/%%subpackage%%/%%model%%/item_data%%Model%%.jsp',
+			closable:true
+		});
+	}
+</script>

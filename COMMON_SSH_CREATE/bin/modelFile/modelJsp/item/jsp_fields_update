@@ -1,0 +1,1 @@
+formitem_%%subpackage%%_%%Model%%['%%model%%_%%FieldNameVal%%'].setValue(model.%%FieldNameVal%%);

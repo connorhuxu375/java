@@ -1,0 +1,112 @@
+package ${T.packageName};
+
+import java.io.Serializable;
+import java.sql.Timestamp;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+import org.apache.struts2.json.annotations.JSON;
+
+import com.zhk.core.base.modelbase.ModelBase;
+import com.zhk.core.base.modelbase.anntation.AnnHelpers;
+import com.zhk.core.base.modelbase.anntation.CheckCondition;
+/**
+ * 
+ * 描述：${T.className}ACTION 装载值对象
+ * @author	:${A.authorInfo}
+ * @version	:${A.version}
+ * @date	:${A.date}
+ * 说明:		:${A.note}
+ */
+@Entity
+@Table(name="${T.tableName}")
+@CheckCondition
+public class ${T.className}  extends ModelBase implements  Serializable {
+	@Override
+	public boolean isNull() {
+		return seqid == null || seqid <= 0;
+	}
+	@Override
+	public String toString() {
+		return AnnHelpers.modelBasetoString(this);
+	}
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer seqid;
+
+	/*****************************************
+	 * 非Integer SEQID请重写  getObjectID 方法
+	 ****************************************/   
+	public Serializable getObjectID() {
+		return super.getObjectID();
+	}
+	/*****************************************
+	 * 非Integer  SEQID请重写  setObjectID 方法
+	 ****************************************/   
+	public void setObjectID(Serializable seqid) {
+		super.setObjectID(seqid);
+	}
+	
+	/*****************************************
+	 * 重写  ModelBase 抽像方法
+	 ****************************************/   
+	public Integer getSeqid() {
+		return seqid;
+	}
+	/*****************************************
+	 * 重写 ModelBase 抽像方法
+	 ****************************************/ 
+	public void setSeqid(Integer seqid) {
+		this.seqid = seqid;
+	}
+
+	/*****************************************
+	 * 其它字段 由据数据库自动生成. 注意修改 @CheckCondition
+	 ****************************************/  
+#foreach( ${C} in ${T.colunms} )
+#if (${C.G.PojoField})
+	@CheckCondition(
+	infos="{label:'${C.label}',export:${C.export}}"
+#if ( ${C.checkType}=='select' || ${C.checkType}=='radio' || ${C.checkType}=='checkbox'  ) 
+	,check="{type:'${C.checkType}', must:${C.must},header:${C.header},text:'${C.text}',value:'${C.value}'}" 
+	,items = "{url:'',items:[{text:'等待处理',value:'100'}]}"  
+#else 
+	,check="{type:'${C.checkType}',max:${C.max},min:${C.min},must:${C.must},format:'${C.format}',example:'${C.example}'}" 
+#end 
+	 )
+	@Column(name="${C.column}")
+	private    ${C.javaType}    ${C.field};
+	public void ${C.setMethod}(${C.javaType} ${C.field}){
+		 this.${C.field}=${C.field};
+	}
+#if ( ${C.format}=='datetime'   ) 
+	@JSON(format="yyyy-MM-dd HH:mm:ss")
+#end
+	public     ${C.javaType}    ${C.getMethod}(){
+		return ${C.field};
+	}
+#if ( ${C.format}=='datetime'   ) 
+	/**
+ 	 *对应 ${C.label} 查询结束字段 
+ 	 *非持久化属性.用于结束查询条件
+	 */
+	@Transient
+	private    ${C.javaType}    ${C.field}End;
+	public void ${C.getMethod}End(   ${C.javaType}   ${C.field}End){
+		 this.${C.field}End=${C.field}End;
+	}
+	@JSON(format="yyyy-MM-dd HH:mm:ss")
+	public    ${C.javaType}    ${C.getMethod}End(){
+		return ${C.field}End;
+	}
+#end 
+
+#end  
+#end 
+}

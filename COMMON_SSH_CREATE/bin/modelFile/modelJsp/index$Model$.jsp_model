@@ -1,0 +1,31 @@
+<%@page 	language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@include 	file="/import/include/import.jsp" %>
+<%@page 	import="com.nvm.%%author%%.%%subpackage%%.action.*"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- 
+  @author  : %%authorInfo%%
+  @version : %%version%%
+  @date     : %%date%%
+-->
+<html >
+  <head> 
+    <title>index</title>
+	<%@include file="/import/include/resource.jsp" %> 
+  </head>
+<body class="easyui-layout" style="font-size:18">  
+	<div  data-options="region:'north',border:false" style="height:60px;background:#B3DFDA;padding:10px"> </div>
+	<div  data-options="region:'west',split:true,title:'West',href:'<%=basePath %>%%rootdir%%/%%subpackage%%/%%model%%/item_menu%%Model%%.jsp'" style="width:150px;padding:10px;"> </div>
+	
+	<div  data-options="region:'east',split:true,collapsed:true,title:'East',border:true" style="width:100px;padding:0px;"> </div>
+	
+	<div  data-options="region:'south',border:false" style="height:0px;background:#A9FACD;padding:0px;" style="display:none"> </div>
+	
+	<div  data-options="region:'center',title:'Center',href:'<%=basePath %>%%rootdir%%/%%subpackage%%/%%model%%/item_tabs%%Model%%.jsp'">
+	</div>
+	
+</body> 
+</html>

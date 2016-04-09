@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.cfg</packageName>
+    <className>CfgUser</className>
+    <objectName>cfgUser</objectName>
+    <tableName>CFG_USER</tableName>
+    <prefix>cfg</prefix>
+   
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ACC_SEQID</column>
+        <label>用户</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>accSeqid</field>
+        <getMethod>getAccSeqid</getMethod>
+        <setMethod>setAccSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ABLE_MESSAGE</column>
+        <label>接收消息开关</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>ableMessage</field>
+        <getMethod>getAbleMessage</getMethod>
+        <setMethod>setAbleMessage</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>NOTIFY_MONEY_MIN</column>
+        <label>余额通知阀值</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>notifyMoneyMin</field>
+        <getMethod>getNotifyMoneyMin</getMethod>
+        <setMethod>setNotifyMoneyMin</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

@@ -1,0 +1,17 @@
+package ${T.packageName};
+
+import com.zhk.core.base.modelbase.ModelBase;
+import com.zhk.core.base.daobase.DaoBase;
+/**
+ * 
+ * 描述${T.className}DAO 接口
+ * @author	:${A.authorInfo}
+ * @version	:${A.version}
+ * @date	:${A.date}
+ * 说明:		:${A.note}
+ */
+public interface ${T.className}Dao extends DaoBase   {
+	/*****************************************
+	 * 其它DAO需提供的方法在此申明  
+	 ****************************************/   
+}

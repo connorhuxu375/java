@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.zhk.core.app</packageName>
+    <className>AppSchoolCfg</className>
+    <objectName>appSchoolCfg</objectName>
+    <tableName>APP_SCHOOL_CFG</tableName>
+    <prefix>app</prefix>
+     
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCH_SEQID</column>
+        <label>学校</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>schSeqid</field>
+        <getMethod>getSchSeqid</getMethod>
+        <setMethod>setSchSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>MDL_SEQID</column>
+        <label>应用</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>mdlSeqid</field>
+        <getMethod>getMdlSeqid</getMethod>
+        <setMethod>setMdlSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SHOW_TYPE</column>
+        <label>显示</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>showType</field>
+        <getMethod>getShowType</getMethod>
+        <setMethod>setShowType</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ORDER_ON</column>
+        <label>排序</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>orderOn</field>
+        <getMethod>getOrderOn</getMethod>
+        <setMethod>setOrderOn</setMethod>
+        <generation search="false" sort="false" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

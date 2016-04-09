@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageName>com.nvm.huxu.view</packageName>
+    <className>ViewAccParentMap</className>
+    <objectName>viewAccParentMap</objectName>
+    <tableName>VIEW_ACC_PARENT_MAP</tableName>
+    <prefix>view</prefix>
+   
+    <colunm checkType="datetime" format="datetime" header="1" min="0" max="20" example="" value="value" text="text">
+        <column>UPDATETIME</column>
+        <label>更新时间</label>
+        <javaType>Date</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>updatetime</field>
+        <getMethod>getUpdatetime</getMethod>
+        <setMethod>setUpdatetime</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCH1_SEQID</column>
+        <label>学校id1</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>sch1Seqid</field>
+        <getMethod>getSch1Seqid</getMethod>
+        <setMethod>setSch1Seqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ROLE_SEQID</column>
+        <label>角色</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>roleSeqid</field>
+        <getMethod>getRoleSeqid</getMethod>
+        <setMethod>setRoleSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ACC_SEQID</column>
+        <label>帐号id</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>accSeqid</field>
+        <getMethod>getAccSeqid</getMethod>
+        <setMethod>setAccSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>ACCOUNT</column>
+        <label>帐号</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>account</field>
+        <getMethod>getAccount</getMethod>
+        <setMethod>setAccount</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>PASSWORD</column>
+        <label>密码</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>password</field>
+        <getMethod>getPassword</getMethod>
+        <setMethod>setPassword</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>STATUS</column>
+        <label>状态</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>status</field>
+        <getMethod>getStatus</getMethod>
+        <setMethod>setStatus</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SCH2_SEQID</column>
+        <label>学校id</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>sch2Seqid</field>
+        <getMethod>getSch2Seqid</getMethod>
+        <setMethod>setSch2Seqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>STU_SEQID</column>
+        <label>学生id</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>stuSeqid</field>
+        <getMethod>getStuSeqid</getMethod>
+        <setMethod>setStuSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="20" example="" value="value" text="text">
+        <column>GUARDIAN_TYPE</column>
+        <label>与学生关系</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>guardianType</field>
+        <getMethod>getGuardianType</getMethod>
+        <setMethod>setGuardianType</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>SYS_CODE</column>
+        <label>系统编码</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>sysCode</field>
+        <getMethod>getSysCode</getMethod>
+        <setMethod>setSysCode</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="20" example="" value="value" text="text">
+        <column>PARENT_CARD_ID</column>
+        <label>家长卡号</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>parentCardId</field>
+        <getMethod>getParentCardId</getMethod>
+        <setMethod>setParentCardId</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>PARENT_NAME</column>
+        <label>家长姓名</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>parentName</field>
+        <getMethod>getParentName</getMethod>
+        <setMethod>setParentName</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="20" example="" value="value" text="text">
+        <column>MOBILE</column>
+        <label>手机号</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>mobile</field>
+        <getMethod>getMobile</getMethod>
+        <setMethod>setMobile</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

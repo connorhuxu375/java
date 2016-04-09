@@ -1,0 +1,2 @@
+<td style="width:70px">%%FieldLabelVal%%:</td><!-- %%FieldLabelVal%% like    search --> 
+<td style="width:160px"><input class="easyui-validatebox"   style='width:120px' name="\%%model\%%.%%FieldNameVal%%" /></td>

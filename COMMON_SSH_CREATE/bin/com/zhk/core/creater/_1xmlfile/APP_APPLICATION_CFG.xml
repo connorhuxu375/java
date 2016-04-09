@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<Table>
+    <packageNamcom.zhk.coreck.app</packageName>
+    <className>AppApplicationCfg</className>
+    <objectName>appApplicationCfg</objectName>
+    <tableName>APP_APPLICATION_CFG</tableName>
+    <prefix>app</prefix>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>SEQID</column>
+        <label>SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>seqid</field>
+        <getMethod>getSeqid</getMethod>
+        <setMethod>setSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>PARENT_SEQID</column>
+        <label>PARENT_SEQID lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>parentSeqid</field>
+        <getMethod>getParentSeqid</getMethod>
+        <setMethod>setParentSeqid</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="50" example="" value="value" text="text">
+        <column>APP_NAME</column>
+        <label>APP_NAME lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>appName</field>
+        <getMethod>getAppName</getMethod>
+        <setMethod>setAppName</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>APP_TYPE</column>
+        <label>APP_TYPE lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>appType</field>
+        <getMethod>getAppType</getMethod>
+        <setMethod>setAppType</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>APP_LEVEL</column>
+        <label>APP_LEVEL lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>appLevel</field>
+        <getMethod>getAppLevel</getMethod>
+        <setMethod>setAppLevel</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="100" example="" value="value" text="text">
+        <column>APP_CODE</column>
+        <label>APP_CODE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>appCode</field>
+        <getMethod>getAppCode</getMethod>
+        <setMethod>setAppCode</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="select" format="int" header="1" min="0" max="4" example="" value="value" text="text">
+        <column>ORDERON</column>
+        <label>ORDERON lable</label>
+        <javaType>Integer</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>orderon</field>
+        <getMethod>getOrderon</getMethod>
+        <setMethod>setOrderon</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="500" example="" value="value" text="text">
+        <column>WEBURL</column>
+        <label>WEBURL lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>weburl</field>
+        <getMethod>getWeburl</getMethod>
+        <setMethod>setWeburl</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="500" example="" value="value" text="text">
+        <column>IMAGE</column>
+        <label>IMAGE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>image</field>
+        <getMethod>getImage</getMethod>
+        <setMethod>setImage</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="200" example="" value="value" text="text">
+        <column>TITLE</column>
+        <label>TITLE lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>title</field>
+        <getMethod>getTitle</getMethod>
+        <setMethod>setTitle</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+    <colunm checkType="text" format="text" header="1" min="0" max="6000" example="" value="value" text="text">
+        <column>CONTENT</column>
+        <label>CONTENT lable</label>
+        <javaType>String</javaType>
+        <must>1</must>
+        <export>1</export>
+        <field>content</field>
+        <getMethod>getContent</getMethod>
+        <setMethod>setContent</setMethod>
+        <generation search="true" sort="true" list="true" input="true" detail="true" pojo="true"/>
+    </colunm>
+</Table>

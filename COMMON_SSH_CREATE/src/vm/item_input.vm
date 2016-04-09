@@ -1,0 +1,173 @@
+<%@page 	language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@include 	file="/import/include/import.jsp" %>
+<%@page 	import="com.zhk.core.base.modelbase.anntation.*"%>
+<%@page 	import="${T.packageName}.*"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%> 
+<!-- 
+  @author	: ${A.authorName} : ${A.authorInfo}
+  @version	: ${A.version} 
+  @date	: ${A.date} 
+  说明	: ${A.note} 
+-->
+  <form  onsubmit=""  method="post">
+  	<input name="${T.objectName}.seqid"   type="hidden" value="${param.seqid}"   />
+	<table style="margin: 20px">
+#foreach( ${C} in ${T.colunms} )
+#if (${C.G.FormInput})
+#if ( ${C.checkType}=='text') 
+	<tr height="30"> <!-- text form --> 
+		<td>${C.label}</td>
+		<td>:</td>	
+		<td>
+			<input style='width: 160'  type="text" id='${T.objectName}_${C.field}'  name='${T.objectName}.${C.field}'     _label='${C.label}' _value=''  _check='<%=CheckHelper.getCheck(${T.className}.class,"${C.field}")%>'  _items='<%=CheckHelper.getItems(${T.className}.class,"${C.field}")%>' />
+		</td>
+	</tr>
+#elseif ( ${C.checkType}=='password') 
+	<tr height="30">  <!-- password form --> 
+		<td>${C.label}</td>
+		<td>:</td>	
+		<td>
+			<input style='width: 160'  type="password" id='${T.objectName}_${C.field}'  name='${T.objectName}.${C.field}'     _label='${C.label}' _value=''  _check='<%=CheckHelper.getCheck(${T.className}.class,"${C.field}")%>' _items='<%=CheckHelper.getItems(${T.className}.class,"${C.field}")%>' />
+		</td>
+	</tr> 
+#elseif ( ${C.checkType}=='textarea'   )
+	<tr height="30">  <!-- textarea form --> 
+		<td>${C.label}</td>
+		<td>:</td>	
+		<td>
+			<textarea  cols='80' rows='6'    id='${T.objectName}_${C.field}'  name='${T.objectName}.${C.field}'     _label='${C.label}' _value=''  _check='<%=CheckHelper.getCheck(${T.className}.class,"${C.field}")%>' _items='<%=CheckHelper.getItems(${T.className}.class,"${C.field}")%>' >
+			</textarea>
+		</td>
+	</tr>  
+#elseif ( ${C.checkType}=='select'   )
+	<tr height="30"> <!-- select form -->
+		<td>${C.label}</td>
+		<td>:</td>	
+		<td>
+			<select style='width: 160'  type="text" id='${T.objectName}_${C.field}'  name='${T.objectName}.${C.field}'     _label='${C.label}' _value=''  _check='<%=CheckHelper.getCheck(${T.className}.class,"${C.field}")%>' _items='<%=CheckHelper.getItems(${T.className}.class,"${C.field}")%>' >
+			</select>
+		</td>
+	</tr>  
+#elseif ( ${C.checkType}=='radio'   ) 
+	<tr height="30"> <!-- radio form -->
+		<td>${C.label}</td>
+		<td>:</td>	
+		<td>
+			<span style='width: 160'  type="text" id='${T.objectName}_${C.field}'  name='${T.objectName}.${C.field}'     _label='${C.label}' _value=''  _check='<%=CheckHelper.getCheck(${T.className}.class,"${C.field}")%>' _items='<%=CheckHelper.getItems(${T.className}.class,"${C.field}")%>' ><span>
+		
+		</td>
+	</tr> 
+#elseif ( ${C.checkType}=='checkbox'   ) 
+	<tr height="30"> <!-- checkbox form -->
+		<td>${C.label}</td>
+		<td>:</td>	
+		<td>
+			<span style='width: 160'  type="text" id='${T.objectName}_${C.field}'  name='${T.objectName}.${C.field}'     _label='${C.label}' _value=''  _check='<%=CheckHelper.getCheck(${T.className}.class,"${C.field}")%>' _items='<%=CheckHelper.getItems(${T.className}.class,"${C.field}")%>' ><span>
+		</td>
+	</tr> 
+#elseif ( ${C.checkType}=='datetime'   )
+	<tr height="30"><!-- date form --> 
+		<td>${C.label}</td>
+		<td>:</td>	
+		<td>
+			<input readonly="readonly"   id="${T.objectName}_${C.field}" name='${T.objectName}.${C.field}' _label='${C.label}' _value=''  _check='<%=CheckHelper.getCheck(${T.className}.class,"${C.field}")%>'  _items='<%=CheckHelper.getItems(${T.className}.class,"${C.field}")%>' >
+	 		<img onclick="WdatePicker({el:'${T.objectName}_${C.field}',dateFmt:'yyyy-MM-dd HH:mm:ss'})" src="<%=basePath %>resource/img/setdate.png" width="16" height="16" align="absmiddle">
+		</td>
+	</tr>  
+#end 
+#end  
+#end 		 
+		<tr height="30">
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+	var formitem_${T.prefix}_${T.className} 
+	$(function(){
+		//初使化表单formitem_${T.prefix}_${T.className} = globalInits(['field1','field1']);
+		 
+formitem_${T.prefix}_${T.className}  = globalInits([
+#set(${T.index}=0)		  
+#foreach( ${C} in ${T.colunms} )
+#if (${C.G.FormInput})
+#if(${T.index}!=0)
+	,'${T.objectName}_${C.field}' 
+#else
+	'${T.objectName}_${C.field}' 
+#end
+#set(${T.index} = ${T.index}+1)
+#end
+#end
+]); 
+		 
+		//获取更新的值 , 如果是添加.此步不需要.
+		var opera = ${param.opera};
+		if(opera== 2 ){
+			$.ajax({
+				type:'post',
+				url: "<%=basePath%>ajax/common_ajax${T.className}_find",
+				data:'${T.objectName}.seqid=${param.seqid}',
+				dataType:'json',
+				success:function(info){	
+					if(info.result == 200){
+						var model = info.model;
+						 
+						 
+#foreach( ${C} in ${T.colunms} )
+#if (${C.G.FormInput})
+ 	formitem_${T.prefix}_${T.className}['${T.objectName}_${C.field}'].setValue(model.${C.field});
+#end
+#end
+						 
+					}else{
+				  		globalOnMessage(formitem_${T.prefix}_${T.className},info);
+				  	}
+				},
+			 	error:function(errinfo){ 
+			 		globalOnError(errinfo);
+			 	}
+			}); 
+		}
+	});	
+	function onReset_input_${T.prefix}_${T.className}( ){
+		  globalOnReset(formitem_${T.prefix}_${T.className});
+	}
+    function  onAjaxSubmit_input_${T.prefix}_${T.className}( ){
+    	var bool = globalOnSubmit(formitem_${T.prefix}_${T.className});
+    	if(!bool){
+    		//alert("js check onsubmit result : "+ bool);
+    		return bool;
+    	}
+		 var data = globalGetAjaxData(formitem_${T.prefix}_${T.className});
+		 data +='&${T.objectName}.seqid=${param.seqid}';
+		 $.ajax({
+			type:'post',
+			url: "<%=basePath%>ajax/common_ajax${T.className}_save",
+			data:data,
+			dataType:'json',
+			success:function(info){
+				
+				if(info.result==200){
+					try{
+						search_listdata_${T.prefix}_${T.className}();
+					}catch(e){
+					}
+					onClose_input_${T.prefix}_${T.className}();
+				}
+			  	globalOnMessage(formitem_${T.prefix}_${T.className},info);
+			},
+		 	error:function(errinfo){ 
+		 		globalOnError(errinfo);
+		 	}
+		});
+	 }
+	 function onClose_input_${T.prefix}_${T.className} (){
+	 	 $('#dialog_listdata_${T.prefix}_${T.className}').dialog('close');
+	 }
+	 </script>
+ </form>

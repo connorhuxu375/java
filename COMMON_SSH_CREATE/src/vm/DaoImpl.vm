@@ -1,0 +1,86 @@
+package ${T.packageName};
+ 
+ import java.sql.Timestamp;
+import org.apache.log4j.Logger;
+import java.util.ArrayList;
+import java.util.List;
+import java.text.SimpleDateFormat;
+import org.springframework.util.StringUtils;
+
+import com.zhk.core.base.actionbase.JsonResult;
+import com.zhk.core.base.modelbase.ModelBase;
+import com.zhk.core.base.daobase.DaoBaseImpl;
+import com.zhk.core.common.exception.SystemCauseRuntimeException;
+import com.zhk.core.common.exception.PlatformCauseRuntimeException;
+
+ 
+ 
+/**
+ * 
+ * 描述：${T.className}DAO 实现类
+ * @author	:${A.authorInfo}
+ * @version	:${A.version}
+ * @date	:${A.date}
+ * 说明:		:${A.note}
+ */
+public class ${T.className}DaoImpl  extends DaoBaseImpl  implements ${T.className}Dao {
+	public final  Logger log = Logger.getLogger(${T.className}DaoImpl.class);
+ 	/****************************************
+	 * 此方法在 DaoBaseImpl 实现为抛出异常.所以必须重写
+	 ****************************************/
+    @SuppressWarnings(value="unchecked")
+    public JsonResult findPagination(ModelBase modelBase) throws Exception{
+    	${T.className} ${T.objectName} = (${T.className})modelBase;
+    	StringBuffer condHql = new StringBuffer();
+    	List condParam = new ArrayList();
+    	/*************生成的查询条件***************************/
+    	
+#foreach( ${C} in ${T.colunms} )
+#if (${C.G.SearchField})
+#if ( ${C.checkType}=='select' || ${C.checkType}=='radio' || ${C.checkType}=='checkbox'  ) 
+	/**
+	*下拉框选择查询,兼容字串及原始类型
+	*/
+	if(${T.objectName}.${C.getMethod}() != null  && !${T.objectName}.${C.getMethod}().toString().equals("-999")){
+		condHql.append(" and  p.${C.field}    =  ? ");
+		condParam.add(${T.objectName}.${C.getMethod}());
+	}
+#elseif ( ${C.format}=='datetime'   ) 
+	/**
+	 *日期查询,提供区间查询
+	 */
+	if(${T.objectName}.${C.getMethod}()    !=null ){
+		condHql.append(" and p.${C.field}  >=  ? ");
+		condParam.add(new Timestamp(${T.objectName}.${C.getMethod}().getTime()) );
+	}
+	if(${T.objectName}.${C.getMethod}() !=null ){
+		condHql.append(" and p.${C.field}  <= ? ");
+		condParam.add(new Timestamp(${T.objectName}.${C.getMethod}End().getTime()) );
+	}
+#else
+	/**
+	*模糊查询
+	*/
+	if(StringUtils.hasText(${T.objectName}.${C.getMethod}()) ){
+		condHql.append(" and p.${C.field}   like ? ");
+		condParam.add("%"+${T.objectName}.${C.getMethod}().trim()+"%");
+	}
+#end 	
+#end  
+#end 
+
+    	/*************生成的查询条件***************************/
+    	return this.queryPage(
+    			" select p ",
+    			" from ${T.className} p where 1=1 "+condHql.toString() , 
+    			" order by p.seqid asc",
+    			condParam.toArray()	
+    	);
+    }
+    
+  
+	 
+    /****************************************
+	 * 其它方法
+	****************************************/
+}
